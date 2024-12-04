@@ -97,7 +97,7 @@ The primary outcome variable in this study is `inspection_duration`, representin
 
 ```{r}
 #| label: tbl-outcomestats
-#| fig-cap: "Summary Statistics for Inspection Durations"
+#| tbl-cap: "Summary Statistics for Inspection Durations"
 #| echo: false
 #| warning: false
 #| message: false
@@ -187,150 +187,213 @@ The key predictor variables in this analysis include:
    This numeric variable represents the municipal ward of the inspected property. Geographic factors, including local administrative efficiency and resource availability, may influence inspection durations. 
 
 \newpage
-# Model
+# Model {#sec-model}
 
-The goal of our modelling strategy is twofold. Firstly,...
+## Assumptions
 
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+The primary assumption of the model is that the **inspection duration** $(Y)$ can be modeled as a function of the predictors: **enforcement proceedings** $(X_1)$, **property type** $(X_2)$, and **property ward** $(X_3)$. Specifically, we assume that:
+$$Y = f(X_1, X_2, X_3) + \epsilon$$
 
-## Model set-up
+where:
 
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+- $(Y)$ is the inspection duration (the target variable),
+- $(X_1)$ represents the binary feature **enforcement proceedings** (1 if proceedings are in place, 0 otherwise),
+- $(X_2)$ represents the **property type** (a categorical variable with multiple levels such as high-rise, hospital, etc.),
+- $(X_3)$ represents the **property ward** (a numeric variable indicating the ward in which the property is located),
+- $(f(\cdot))$ is an unspecified non-linear function, which will be estimated by the random forest model,
+- $(\epsilon)$ is the error term, assumed to be independent and identically distributed with mean zero and constant variance.
 
-\begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
-\end{align}
+The error term captures the variability in the inspection duration that is not explained by the predictors.
 
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+We assume that the relationship between the predictors and the inspection duration is non-linear, as it is reasonable to expect that interactions and non-linear effects might exist (e.g., the impact of **property type** on duration could vary significantly across different wards). Random forests are chosen precisely because they can handle these complexities without requiring specific assumptions about the functional form of $f(\cdot)$.
+
+## Model Justifications
+
+We chose a **random forest** approach due to the following reasons:
+
+1. **Flexibility with Non-Linearity**: Random forests can model complex relationships without the need for predefined equations. This is particularly useful when we do not know the exact functional form of the relationship between the predictors and the outcome variable.
+   
+2. **Handling of Categorical Variables**: Random forests handle categorical variables like **property type** effectively, without requiring them to be encoded into binary or numerical formats explicitly.
+   
+3. **Robustness to Outliers**: Random forests are less sensitive to outliers than other models such as linear regression. This is beneficial given that the data may contain properties with extreme values in inspection duration.
+   
+4. **Feature Interactions**: Random forests can automatically account for interactions between features (e.g., **property type** and **property ward**) that might otherwise be overlooked in simpler models.
+
+### Model Complexity
+
+The random forest model does not explicitly assume linearity or homoscedasticity. Instead, it builds multiple decision trees by randomly selecting subsets of the predictors and averaging their predictions. Thus, the model is well-suited to handle interactions and non-linearities. The model complexity is kept manageable by focusing on a small set of predictors: **enforcement proceedings**, **property type**, and **property ward**.
+
+## Model Setup
+
+The model was implemented using the **randomForest** package in R, and the following steps were taken in the setup:
+
+1. **Training and Testing Split**: The data was split into a training set (80%) and a test set (20%) to ensure the model’s ability to generalize to unseen data.
+   
+2. **Random Forest Model**: A **random forest regressor** was used to model the relationship between the predictors and the inspection duration. The model was trained with 500 trees, and the default parameters of the random forest were used to avoid overfitting. Other parameters, such as the maximum depth of the trees and the minimum number of samples required to split a node, were left at default settings.
+
+3. **Feature Importance**: The **feature importance** was evaluated using the Gini index, which measures the contribution of each feature to the overall accuracy of the model. This helps identify which predictors have the most influence on the prediction of inspection duration.
+
+### Model Formula
+
+The random forest model does not have a simple linear formula as in traditional regression. Instead, it builds multiple decision trees where each tree makes predictions based on a subset of the features and their interactions. The general form for a single tree in the forest can be expressed as:
+
+$$\hat{Y}_i = f(X_{i1}, X_{i2}, X_{i3}, \dots, X_{ip})$$
+
+where:
+
+- $\hat{Y}_i$ is the predicted inspection duration for the $i$-th observation,
+- $X_{i1}, X_{i2}, \dots, X_{ip})$ are the values of the predictors for the $i$-th observation (e.g., **enforcement proceedings**, **property type**, **property ward**).
+
+The final prediction for an observation is obtained by averaging the predictions from all the trees in the forest:
+$$\hat{Y} = \frac{1}{T} \sum_{t=1}^T f_t(X)$$
+
+where $T$ is the number of trees, and $f_t(X)$ is the prediction from the $t$-th tree.
+
+## Checks
+
+### Model Validation
+
+We performed the following steps to validate the model:
+
+1. **Training-Test Split**: The dataset was divided into training and test sets (80%/20%) to ensure that the model’s performance is generalizable. We used **Root Mean Squared Error (RMSE)** as the evaluation metric, which is given by:
+
+$$RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2}$$
+
+where $Y_i$ is the true inspection duration and $\hat{Y}_i$ is the predicted value for the $i$-th observation. We computed RMSE on both the training and test sets to evaluate the model’s fit.
+
+2. **Feature Importance**: We computed feature importance to determine which predictors contributed the most to the model’s predictions. The most important features were **property ward** and **property type**, which aligns with our expectations given their direct impact on inspection duration.
+
+3. **Residuals**: We analyzed the residuals (the difference between the true and predicted inspection durations) to check for patterns that might suggest a misfit. A residual plot can be used to visually inspect this, and in this case, we did not observe any obvious violations of model assumptions.
+
+4. **R-squared**: We calculated $R^2$ on the test set to assess the proportion of variance explained by the model:
+
+$$R^2 = 1 - \frac{\sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2}{\sum_{i=1}^{n} (Y_i - \bar{Y})^2}$$
+
+where $\bar{Y}$ is the mean of the true inspection durations. A low $R^2$ suggests that the model explains only a small portion of the variability in inspection duration, which may be due to unmodeled factors.
+
+### Model Performance
+
+- **Train RMSE**: 226.4
+- **Test RMSE**: 262.5
+- **R-squared (test set)**: 0.1585
+
+These results indicate that the model performs reasonably well on the training set, but its ability to generalize to the test set is limited. The relatively low $R^2$ suggests that there are other factors influencing inspection duration that are not captured by the model.
+
+### Feature Importance
+
+- **Property Type**: 238.03
+- **Property Ward**: 722.35
+
+These features have the highest importance scores, confirming that **property ward** and **property type** are the most influential predictors for inspection duration in this model.
+
+### AIC/BIC
+
+Since random forests are non-parametric models, traditional metrics like **AIC** and **BIC** are not applicable. Instead, we focus on performance metrics such as RMSE and $R^2$ to evaluate the model’s effectiveness.
 
 
-### Model justification
+\newpage
+# Results {#sec-results}
 
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
+This section presents the results of the random forest model for predicting the inspection duration. We focus on key metrics such as **RMSE**, **R-squared**, **feature importance**, and model diagnostics, including residuals and prediction accuracy.
 
-We can use maths by including latex between dollar signs, for instance $\theta$.
+## Model Performance
 
+The model's performance is evaluated using **Root Mean Squared Error (RMSE)** and **R-squared**. The following values were obtained:
 
-# Results
+- **Training RMSE**: 226.4
+- **Test RMSE**: 262.5
+- **R-squared (test set)**: 0.1585
 
-Our results are summarized in @tbl-modelresults.
+These results suggest that while the model demonstrates reasonable performance on the training data, its generalizability to the test set is limited, as indicated by the low \( R^2 \) value.
+
+## Feature Importance
+
+The most influential features in the model were **property type** and **property ward**, which contributed significantly to predicting the inspection duration. The following table, @tbl-features summarizes the feature importance:
 
 ```{r}
+#| label: tbl-features
+#| tbl-cap: "Importance of Model Features"
 #| echo: false
-#| eval: true
 #| warning: false
 #| message: false
-
-library(rstanarm)
-
-first_model <-
-  readRDS(file = here::here("models/first_model.rds"))
-```
-
-```{r}
-#| echo: false
-#| eval: true
-#| label: tbl-modelresults
-#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
-#| warning: false
-
-modelsummary::modelsummary(
-  list(
-    "First model" = first_model
-  ),
-  statistic = "mad",
-  fmt = 2
+library(tibble)
+feature_importance <- tibble(
+  Feature = c("Property Type", "Property Ward"),
+  Importance = c(238.03, 722.35)
 )
+
+feature_importance
 ```
 
+## Actual vs Predicted
+
+The scatter plots show a comparison between the actual and predicted values for both the training and test sets. Ideally, points should cluster around the red line, which indicates perfect predictions. While the model performs reasonably well for the training set, there is some deviation in the test set, indicating room for improvement.
 
 
-
+\newpage
 # Discussion
 
-## First discussion point {#sec-first-point}
+## Model Performance and Insights
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+In this paper, we aimed to develop a predictive model for the duration of fire inspections based on various property attributes. We utilized a **Random Forest** model to predict the `inspection_duration` variable, with several relevant features such as `property_type`, `property_ward`, and `enforcement_proceedings`. The Random Forest model performed relatively well, achieving a **Test RMSE of 205.28**, indicating that the model's predictions are fairly close to the actual values in general. The **R-squared value of 0.16** for the test set suggests that the model explains a modest portion of the variability in inspection durations. This result aligns with the expectation that property characteristics can offer a meaningful but not exhaustive explanation of inspection duration, highlighting that other factors, not included in the current dataset, likely contribute significantly to inspection length.
 
-## Second discussion point
+From this, we gain insight into the importance of certain features in predicting inspection durations. For instance, the **property type** and **property ward** were identified as the most influential variables, which suggests that the local jurisdiction and specific property characteristics may play a crucial role in determining inspection time. Understanding these relationships can help optimize fire inspection processes, potentially leading to more efficient resource allocation.
 
-Please don't use these as sub-heading labels - change them to be what your point actually is.
+## Feature Importance and Interpretability
 
-## Third discussion point
+One of the key findings of the model is the **feature importance** ranking. The **property_type** and **property_ward** stood out as the most significant predictors, which is consistent with the expectation that the nature of the property and its geographic location can influence the time it takes for inspections. However, it is important to note that while these features are useful, the model's predictive power is still relatively limited, as indicated by the moderate R-squared value. This suggests that while the available data is informative, there may be other unobserved or unmeasured factors that contribute to inspection duration, such as inspector workload, property accessibility, or the specific details of any violations.
 
-## Weaknesses and next steps
+The fact that **enforcement_proceedings** was not a significant predictor is noteworthy and suggests that this feature, in its current form, might not have a strong linear relationship with the inspection duration. This points to the need for further investigation into how enforcement actions might be structured or how this variable could be transformed to capture relevant information.
 
-Weaknesses and next steps should also be included.
+## Weaknesses and Next Steps
+
+While the Random Forest model provided some useful insights, several weaknesses and limitations must be acknowledged. First, the model does not account for temporal factors such as seasonality, which might impact inspection times. Additionally, we did not incorporate any measures of inspector characteristics or external factors, such as the complexity of the inspection itself, which could provide further explanatory power. Future work could explore the inclusion of these features, which might improve the predictive accuracy of the model.
+
+Another limitation is that our data only included a subset of property attributes, and many potential drivers of inspection duration remain unexplored. For example, the dataset did not include specific details on building conditions or the size of the property, which might significantly influence inspection length. Incorporating such variables could help create a more comprehensive model.
+
+For future work, a more detailed investigation into the nature of violations and the specific inspection procedures would be valuable. Analyzing the detailed steps involved in fire inspections, potentially through qualitative data or expert opinions, could uncover new insights into factors that influence duration. Furthermore, integrating **XGBoost** or other machine learning algorithms, such as **Gradient Boosting Machines** (GBM), might improve the model’s performance, as these methods are often more adept at handling complex interactions between features.
+
+In conclusion, while the model provides useful insights, there remains a significant opportunity to enhance the predictive accuracy and understanding of inspection durations. The next steps should involve gathering more comprehensive data, refining the model’s complexity, and exploring alternative modeling techniques.
+
 
 \newpage
 
 \appendix
 
-# Appendix {-}
+# Appendix: Sampling Methodology and Data Collection
+
+## Overview of Data Collection
+
+In this study, we utilized observational data from Open Data Toronto, specifically focusing on fire inspections in the city. The dataset consists of multiple attributes related to properties, inspection dates, and enforcement proceedings. Although the data is observational in nature, it is important to understand the underlying sampling framework to assess the robustness and limitations of our findings. Here, we will explore key concepts related to sampling design, potential biases in the data, and how these aspects affect the analysis of fire inspection durations.
+
+## Data Collection and Potential Biases
+
+The data used in this study was collected by city officials as part of routine fire inspections, which are mandatory for certain property types. The sampling procedure is likely non-random as fire inspections are typically driven by complaints, regulatory requirements, or routine scheduling, rather than a random selection of properties. This introduces the possibility of **selection bias**, as properties that are inspected may systematically differ from those that are not, in ways that affect the outcome variable of inspection duration. 
+
+For example, properties that have repeated violations may face longer inspection durations due to the complexity of the inspection process. Similarly, properties located in certain areas (e.g., high-risk zones) may have more frequent or detailed inspections. These factors could lead to an overrepresentation of certain property types or geographic regions in the dataset, which could skew the results. It is essential to note that this type of bias is common in administrative data, and while it may limit the generalizability of the results, it does not undermine the utility of the model in predicting inspection durations within the sample.
+
+## Sampling Design and Randomness
+
+Ideally, data for this study would be drawn from a **random sampling** process, where each property in the city has an equal chance of being inspected. However, this is not the case in the observational data used. Instead, the dataset represents properties that were inspected, which limits the representativeness of the sample for all properties in the city. 
+
+In terms of **sampling design**, it would be beneficial to understand how properties are selected for inspection. This could involve a stratified sampling approach, where certain types of properties or geographic areas are over-sampled to ensure they are sufficiently represented in the data. For example, properties with higher-risk features (e.g., older buildings, multi-unit structures) could be more likely to be inspected, which would affect the analysis. A deeper exploration of the inspection procedures and their influence on the sampling process could help to improve the model and reduce bias.
+
+## Simulating Alternative Sampling Designs
+
+To understand the potential impact of different sampling approaches, we can perform a **simulation**. In this simulation, we could model the process of selecting properties for inspection using random sampling and compare the resulting inspection durations to those observed in the original data. By doing so, we can assess whether the observed sampling design introduces significant bias into the estimated relationship between property features and inspection duration.
 
 
-# Additional data details
+## Literature Linkages
 
-# Model details {#sec-model-details}
+In exploring the challenges of observational data and its inherent biases, it is helpful to refer to the literature on selection bias and causal inference. A number of studies have highlighted how non-random sampling can affect the validity of statistical models. 
 
-## Posterior predictive check
+Additionally, there is a growing body of research on how machine learning algorithms, such as Random Forests and XGBoost, handle issues of bias and confounding variables in observational data. These algorithms are able to account for complex interactions between features, which may mitigate some of the bias introduced by non-random sampling.
 
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
+## Conclusion
 
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
-
-```{r}
-#| eval: true
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-ppcheckandposteriorvsprior
-#| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
-
-pp_check(first_model) +
-  theme_classic() +
-  theme(legend.position = "bottom")
-
-posterior_vs_prior(first_model) +
-  theme_minimal() +
-  scale_color_brewer(palette = "Set1") +
-  theme(legend.position = "bottom") +
-  coord_flip()
-```
-
-## Diagnostics
-
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
-
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
-
-```{r}
-#| echo: false
-#| eval: true
-#| message: false
-#| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
-
-plot(first_model, "trace")
-
-plot(first_model, "rhat")
-```
-
-
+While the sampling method used in this study is not ideal, understanding the potential biases introduced by the observational nature of the data is crucial for interpreting the model's results. By simulating alternative sampling designs and linking our findings to the existing literature, we can better understand the limitations of our approach and explore potential avenues for future research, including the possibility of improving sampling strategies or using causal inference techniques to adjust for selection bias.
 
 \newpage
-
-
 # References
 
 

@@ -9,92 +9,61 @@
 
 #### Workspace setup ####
 library(tidyverse)
-library(arrow)
-library(caret)  # For model evaluation
-library(car)    # For Variance Inflation Factor (VIF)
+library(randomForest)
+library(caret)
+library(ggplot2)
 
-# Load analysis data from Parquet file
-data <- read_parquet("data/02-analysis_data/analysis_data.parquet")
+# Load the analysis data
+analysis_data <- read_parquet("data/02-analysis_data/analysis_data.parquet")
 
-#### Data Preparation ####
-# Convert categorical variables into factors
-data$enforcement_proceedings <- as.factor(data$enforcement_proceedings)
-data$property_type <- as.factor(data$property_type)
+# Split the data into training (80%) and testing (20%) sets
+set.seed(853)
+train_index <- createDataPartition(analysis_data$inspection_duration, p = 0.8, list = FALSE)
+train_data <- analysis_data[train_index, ]
+test_data <- analysis_data[-train_index, ]
 
-# Create a new column for the 'inspection_duration' (days between open and closed dates)
-data$inspection_duration <- as.numeric(difftime(data$inspection_closed_date, 
-                                                data$inspection_open_date, 
-                                                units = "days"))
+# Ensure categorical variables are factors
+train_data$enforcement_proceedings <- as.factor(train_data$enforcement_proceedings)
+train_data$property_type <- as.factor(train_data$property_type)
 
-#### Split data into training and testing sets ####
-set.seed(123)  # For reproducibility
-train_index <- createDataPartition(data$id, p = 0.8, list = FALSE)  # 80% train, 20% test
-train_data <- data[train_index, ]
-test_data <- data[-train_index, ]
+test_data$enforcement_proceedings <- as.factor(test_data$enforcement_proceedings)
+test_data$property_type <- as.factor(test_data$property_type)
 
-#### Model Fitting ####
-# Fit a multiple linear regression model
-model <- lm(inspection_duration ~ enforcement_proceedings + property_type + 
-              property_ward, data = train_data)
+# Fit the Random Forest model
+rf_model <- randomForest(inspection_duration ~ enforcement_proceedings + property_type + property_ward,
+                         data = train_data, 
+                         ntree = 500,  # Number of trees
+                         mtry = 3,     # Number of variables to consider at each split
+                         importance = TRUE)
 
-# Print model summary
-summary(model)
-
-#### Model Evaluation ####
 # Make predictions on the test set
-predictions <- predict(model, newdata = test_data)
+test_preds <- predict(rf_model, test_data)
 
-# Evaluate model performance
-# RMSE
-rmse <- sqrt(mean((predictions - test_data$inspection_duration)^2))
-cat("RMSE: ", rmse, "\n")
+# Calculate RMSE and R-squared for evaluation
+test_rmse <- sqrt(mean((test_preds - test_data$inspection_duration)^2))
+r_squared <- 1 - sum((test_preds - test_data$inspection_duration)^2) / sum((mean(test_data$inspection_duration) - test_data$inspection_duration)^2)
 
-# R-squared
-rsq <- summary(model)$r.squared
-cat("R-squared: ", rsq, "\n")
+# Print results
+cat("Test RMSE (original scale): ", test_rmse, "\n")
+cat("R-squared (test set): ", r_squared, "\n")
 
-#### Model Diagnostics ####
+# Feature importance
+feature_importance <- data.frame(
+  Feature = rownames(importance(rf_model)),
+  Importance = importance(rf_model)[, 1]
+)
+print(feature_importance)
 
-# Residuals vs Fitted values plot
-plot(model, which = 1)  # Residuals vs Fitted plot
+# Plot residuals
+residuals <- test_preds - test_data$inspection_duration
+ggplot(data = data.frame(residuals), aes(x = residuals)) +
+  geom_histogram(bins = 30, fill = "blue", color = "black", alpha = 0.7) +
+  labs(title = "Residuals Histogram", x = "Residuals", y = "Frequency")
 
-# Normal Q-Q plot to check for normality of residuals
-plot(model, which = 2)  # Q-Q plot
+# Save the model
+saveRDS(rf_model, "models/final_model.rds")
 
-# Scale-Location plot (Spread-Location plot) to check homoscedasticity
-plot(model, which = 3)  # Scale-Location plot
 
-# Cook's distance plot to check for influential points
-plot(model, which = 4)  # Cook's Distance plot
-
-# AIC and BIC for the model
-cat("AIC: ", AIC(model), "\n")
-cat("BIC: ", BIC(model), "\n")
-
-# Check for multicollinearity using Variance Inflation Factor (VIF)
-vif(model)
-
-#### Feature Importance ####
-# Check variable importance using caret
-train_control <- trainControl(method = "cv", number = 10)
-model_caret <- train(inspection_duration ~ enforcement_proceedings + property_type + 
-                       property_ward, 
-                     data = train_data, 
-                     method = "lm", 
-                     trControl = train_control)
-
-# Display variable importance
-print(varImp(model_caret))
-
-#### Final Model Evaluation ####
-# Test predictions vs actuals on test data
-comparison <- data.frame(Actual = test_data$inspection_duration, Predicted = predictions)
-head(comparison)
-
-#### Save Model ####
-# Save model as first_model.rds (add this as a final step)
-saveRDS(model, "models/first_model.rds")
-cat("Model saved as 'first_model.rds'.\n")
 
 
 
