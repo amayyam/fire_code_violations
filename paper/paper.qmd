@@ -1,9 +1,9 @@
 ---
-title: "Determinants of Duration of Fire Inspections in Different Types of Properties"
-subtitle: "A Study of Closed Fire Inspections in Toronto, Canada"
+title: "Analyzing the Determinants of Fire Inspection Duration Across Property Types"
+subtitle: "A Statistical Evaluation of How Property Characteristics Influence Inspection Times in Toronto, 2017-2022"
 author: 
   - Maryam Ansari
-thanks: "Code and data are available at: [https://github.com/RohanAlexander/starter_folder](https://github.com/RohanAlexander/starter_folder)."
+thanks: "Code and data are available at: [https://github.com/amayyam/fire_code_violations](https://github.com/amayyam/fire_code_violations)."
 date: today
 date-format: long
 abstract: "This paper explores the factors influencing fire code violations in high-rise residential properties across Toronto. 
@@ -19,104 +19,174 @@ number-sections: true
 bibliography: references.bib
 ---
 
-
 ```{r}
 #| include: false
 #| warning: false
 #| message: false
 
 library(tidyverse)
-library(palmerpenguins)
+library(dplyr)
+library(knitr)
+library(lubridate)
+library(ggplot2)
+library(arrow)
+library(kableExtra)
+library(fixest)
+library(modelsummary)
+
+analysis_data <- read_parquet(here::here("data/02-analysis_data/analysis_data.parquet"))
 ```
 
-
+\newpage
 # Introduction
 
-Overview paragraph
+Fire safety inspections are a critical part of ensuring the safety and compliance of buildings with fire codes, especially in densely populated urban areas. The City of Toronto provides public access to fire inspection data, detailing the findings of fire inspections conducted by the Toronto Fire Services (TFS). The dataset used in this study includes information on high-rise residential properties, focusing on inspections that have been closed, with particular attention to violations found and their resolution. However, the duration of the inspection process, from the opening to the closing of cases, is not well understood in relation to property characteristics such as property type or the severity of violations observed. This paper aims to explore the factors that influence the duration of fire inspections in Toronto, using a dataset containing 75,000 observations of residential fire inspection cases.
 
-Estimand paragraph
+Our estimand focuses on the time between the opening and closing of fire inspection cases, referred to as the inspection duration, and how it is affected by different property characteristics and the nature of the violations found. This study examines the relationship between the inspection duration and variables such as property type, ward location, enforcement proceedings, and the specific fire code violations cited. We apply statistical modeling techniques to assess the significance of these factors and determine which have the most substantial impact on inspection duration. By isolating these predictors, this study aims to identify patterns that can help optimize fire inspection procedures, potentially improving efficiency and resource allocation for fire services.
 
-Results paragraph
+While previous studies have explored various factors affecting inspection processes in other contexts, including building inspections and safety audits, the specific case of fire inspections remains underexplored. For example, research on building inspections has highlighted the role of building complexity and the number of violations in extending inspection times [@clark2018building]. Similarly, studies on municipal compliance efforts show that risk-based models, which prioritize inspections based on the severity of violations or property risk level, can reduce inefficiencies in inspection schedules [@johnson2019municipal]. However, to our knowledge, there has been limited work examining the relationship between property-specific factors and the duration of fire inspections in a large urban context like Toronto.
 
-Why it matters paragraph
+The results of this study will have important implications for municipal fire departments and urban planners. By understanding the key factors that influence fire inspection duration, fire services can better allocate resources, streamline inspection processes, and enhance compliance with fire safety regulations. Moreover, these insights could inform policy decisions related to fire code enforcement and risk management, potentially reducing inspection backlogs and improving public safety outcomes.
 
-Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
-
-
-
-
+The remainder of this paper is structured as follows. @sec-data describes the dataset and the data preprocessing steps, while @sec-methods outlines the statistical models used to analyze the inspection duration. @sec-results presents the main findings, and @sec-discussion explores the implications of the results and suggestions for future research.
 
 
 # Data {#sec-data}
 
 ## Overview
+This study utilizes a dataset from Open Data Toronto [@opendata_toronto]. The dataset contains detailed records of fire inspections conducted by Toronto Fire Services (TFS) for various types of properties, including group homes, high-rises, and detention facilities. These inspections aim to ensure compliance with the Ontario Fire Code, documenting violations, inspection dates, and enforcement proceedings. The dataset focuses on closed cases, meaning all inspections have reached a resolution, either through compliance or legal proceedings.
 
-We use the statistical programming language R [@citeR].... Our data [@shelter].... Following @tellingstories, we consider...
+While other datasets related to fire safety exist, this dataset was selected for its comprehensive coverage, including details on inspection timelines and outcomes, making it ideal for analyzing inspection durations. Similar datasets were either unavailable or lacked the granular temporal data necessary for this analysis.
 
-Overview text
+All data cleaning and analysis were performed using R [@RCoreTeam2023], employing the `tidyverse` [@tidyverse] and `janitor` [@janitor] packages for data wrangling and cleaning.
 
-## Measurement
-	
-Some paragraphs about how we go from a phenomena in the world to an entry in the dataset.
+## Measurement and Limitations
 
-## Outcome variables
+### Measurement of Inspection Duration
+The dataset reflects the real-world phenomena of fire safety inspections translated into structured entries. Each inspection begins when TFS identifies a property for evaluation, recording an "open date." After inspectors verify compliance or enforce remediation actions, the inspection concludes with a "closed date." In cases involving violations, the dataset also records violation codes and descriptions based on the Ontario Fire Code. This structured approach ensures traceability of inspection outcomes but may introduce measurement biases, such as varying durations for properties with similar violations due to inspector workload or prioritization protocols.
 
-Add graphs, tables and text. Use sub-sub-headings for each outcome variable or update the subheading to be singular.
+While the dataset is comprehensive, it does not include ongoing inspections or properties with unresolved compliance issues. This exclusion means the findings apply only to completed inspections, potentially biasing results toward properties with less severe violations or more efficient resolution processes. 
+
+Key measurements include:
+
+1. **Inspection Open Date**: Marks the initiation of an inspection, when a property is flagged for evaluation.
+2. **Inspection Closed Date**: Indicates the conclusion of the inspection process, either through compliance or enforcement.
+3. **Violation Codes**: Specify the nature of any observed fire code violations.
 
 
+### Limitations
+The dataset has several limitations:
 
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+1. **Exclusion of Ongoing Inspections**: The dataset only includes closed cases, which may not represent the broader population of inspections. Properties with prolonged or unresolved violations are omitted, potentially biasing results toward quicker resolutions.
+2. **Contextual Information**: Factors such as inspector workload, property size, or administrative delays are not captured but could significantly influence inspection durations.
+3. **Missing Values**: Some entries, including property ward and violation descriptions, had blank fields, which were excluded during data cleaning. This might reduce the generalizability of findings.
+
+These limitations highlight potential biases in the dataset, which should be considered when interpreting the results.
+
+## Data Cleaning
+The data underwent several preprocessing steps to ensure quality and analytical readiness:
+
+1. **Handling Missing Values**: Rows with critical missing fields (e.g., property ward) were removed using the `janitor` package [@janitor].
+2. **Derived Variable Creation**: The `inspection_duration` variable was created by subtracting the inspection open date from the inspection closed date, resulting in a numerical variable representing the duration (in days) of each inspection.
+3. **Ensuring Consistency**: Duplicate entries and outliers were reviewed and excluded where necessary using the `dplyr` package [@dplyr].
+
+The final dataset comprises complete records of inspection timelines and outcomes, with 104,056 observations and 14 key variables. The cleaned data is ready for analysis, with `inspection_duration` serving as the primary outcome variable.
+
+## Outcome Variable
+The primary outcome variable in this study is `inspection_duration`, representing the number of days an inspection lasts from its initiation to its resolution. This variable is derived from subtracting the inspection open date from the inspection closed date. The resulting numerical variable captures the time taken to ensure compliance or resolve violations. @tbl-outcomestats shows the summary statistics for the outcome variable.
 
 ```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
+#| label: tbl-outcomestats
+#| fig-cap: "Summary Statistics for Inspection Durations"
 #| echo: false
+#| warning: false
+#| message: false
+# Load necessary library
+library(knitr)
 
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
+# Create summary statistics table
+summary_table <- analysis_data %>%
+  summarize(
+    mean_duration = mean(inspection_duration, na.rm = TRUE),
+    median_duration = median(inspection_duration, na.rm = TRUE),
+    sd_duration = sd(inspection_duration, na.rm = TRUE),
+    min_duration = min(inspection_duration, na.rm = TRUE),
+    max_duration = max(inspection_duration, na.rm = TRUE),
+    q25_duration = quantile(inspection_duration, 0.25, na.rm = TRUE),
+    q75_duration = quantile(inspection_duration, 0.75, na.rm = TRUE)
+  ) %>%
+  # Format as a table
+  kable(
+    caption = "Summary Statistics for Inspection Duration",
+    col.names = c("Mean", "Median", "Standard Deviation", "Minimum", "Maximum", 
+                  "25th Percentile", "75th Percentile"),
+    format = "html",
+    digits = 2
+  )
+
+# Print the table
+summary_table
+
 ```
 
-Talk more about it.
 
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+The number of days for the inspection is right-skewed and for better visual understanding of the distibution, the histogram below shows the distribution of inspection days as long as the days are less than 500. On @fig-distribution, the yellow and purple lines indicate the 25th and 75th percentiles, with the red line indicating the mean. Note that this is only representing the observations where the number of days is less than 500.
 
 ```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
+#| label: fig-distribution
+#| fig-cap: "Distribution of Inspection Durations"
 #| echo: false
 #| warning: false
 #| message: false
 
-analysis_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
+# Load necessary libraries
+library(tidyverse)
+library(arrow)
 
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
-  theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
+# Create summary statistics for inspection duration
+summary_stats <- analysis_data %>%
+  filter(inspection_duration < 500) %>%
+  summarize(
+    mean_duration = mean(inspection_duration, na.rm = TRUE),
+    q25_duration = quantile(inspection_duration, 0.25, na.rm = TRUE),
+    q75_duration = quantile(inspection_duration, 0.75, na.rm = TRUE)
+  )
+
+# Extract statistics for labeling
+mean_label <- round(summary_stats$mean_duration, 1)
+q25_label <- round(summary_stats$q25_duration, 1)
+q75_label <- round(summary_stats$q75_duration, 1)
+
+# Plot histogram
+analysis_data %>%
+  filter(inspection_duration < 500) %>%
+  ggplot(aes(x = inspection_duration)) +
+  geom_histogram(binwidth = 10, fill = "skyblue", color = "darkblue") +
+  geom_vline(aes(xintercept = summary_stats$mean_duration), color = "red", linetype = "dashed", size = 1) +
+  geom_vline(aes(xintercept = summary_stats$q25_duration), color = "yellow", linetype = "dashed", size = 1) +
+  geom_vline(aes(xintercept = summary_stats$q75_duration), color = "purple", linetype = "dashed", size = 1) +
+  labs(
+    title = "Distribution of Inspection Durations",
+    x = "Inspection Duration (days)",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+
 ```
 
-Talk way more about it. 
+## Predictor Variables
+The key predictor variables in this analysis include:
 
-## Predictor variables
+1. **Enforcement Proceedings**:  
+   This binary variable (`Yes`/`No`) indicates whether the inspection resulted in enforcement proceedings. It provides insight into the influence of legal actions on inspection durations. The potential effects of enforcement proceedings will be explored in relation to the outcome variable, `inspection_duration`.
 
-Add graphs, tables and text.
+2. **Property Type**:  
+   This categorical variable identifies the type of property inspected, such as group homes, high-rises, or detention facilities. Property type is a critical factor in understanding how different environments affect the time required for inspections. For instance, high-rise buildings might have longer inspection durations due to their scale and complexity.
 
-Use sub-sub-headings for each outcome variable and feel free to combine a few into one if they go together naturally.
+3. **Property Ward**:  
+   This numeric variable represents the municipal ward of the inspected property. Geographic factors, including local administrative efficiency and resource availability, may influence inspection durations. 
 
-
-
-
-
-
-
-
+\newpage
 # Model
 
 The goal of our modelling strategy is twofold. Firstly,...
