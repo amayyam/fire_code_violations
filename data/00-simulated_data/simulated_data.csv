@@ -1,0 +1,1001 @@
+id,property_address,enforcement_proceedings,property_type,property_ward,inspection_open_date,inspection_closed_date,violation_code
+1,Address 1,No,High Rise,15,2021-10-25,2022-01-14,NA
+2,Address 2,No,High Rise,13,2021-08-23,2021-10-27,Code 10
+3,Address 3,No,Low Rise,11,2020-02-11,2020-05-21,Code 6
+4,Address 4,No,High Rise,11,2021-04-24,2021-06-05,Code 10
+5,Address 5,No,Hospital,22,2020-07-16,2020-09-19,Code 13
+6,Address 6,No,Nursing Home,22,2021-06-07,2021-08-21,Code 5
+7,Address 7,No,High Rise,1,2022-06-07,2022-06-16,Code 13
+8,Address 8,No,Low Rise,10,2021-09-20,2021-11-01,Code 17
+9,Address 9,No,Hospital,8,2021-12-11,2021-12-30,Code 17
+10,Address 10,No,High Rise,11,2020-01-21,2020-03-02,Code 11
+11,Address 11,Yes,Low Rise,12,2021-12-11,2022-01-19,Code 14
+12,Address 12,Yes,Low Rise,13,2020-12-14,2021-02-11,Code 19
+13,Address 13,No,High Rise,NA,2022-08-13,2022-11-17,Code 17
+14,Address 14,No,Hotel & Motel,6,2022-03-04,2022-03-26,Code 12
+15,Address 15,No,Hotel & Motel,24,2020-05-14,2020-08-07,Code 4
+16,Address 16,No,High Rise,7,2020-11-21,2021-03-01,Code 16
+17,Address 17,No,Low Rise,12,2021-01-14,2021-01-21,NA
+18,Address 18,No,Low Rise,10,2021-05-31,2021-08-31,Code 15
+19,Address 19,No,Hotel & Motel,19,2021-03-23,2021-06-05,NA
+20,Address 20,No,Group Home (VO),20,2020-01-10,2020-04-06,Code 4
+21,Address 21,Yes,Low Rise,17,2020-10-01,2020-12-17,Code 8
+22,Address 22,No,Low Rise,1,2020-10-31,2020-11-24,Code 12
+23,Address 23,No,Low Rise,1,2020-05-15,2020-06-20,Code 6
+24,Address 24,No,Residential Care,24,2022-09-24,2022-10-01,Code 6
+25,Address 25,No,Group Home,14,2020-02-09,2020-03-13,Code 2
+26,Address 26,No,Low Rise,19,2021-05-17,2021-05-19,Code 13
+27,Address 27,No,Low Rise,23,2021-04-14,2021-06-01,Code 4
+28,Address 28,No,Group Home,21,2021-03-30,2021-04-10,Code 2
+29,Address 29,No,Group Home,16,2022-04-04,2022-04-23,Code 17
+30,Address 30,Yes,High Rise,25,2022-05-22,2022-07-30,Code 1
+31,Address 31,No,Low Rise,14,2022-12-30,2023-03-10,Code 11
+32,Address 32,No,High Rise,22,2021-01-26,2021-01-30,NA
+33,Address 33,No,High Rise,2,2020-01-20,2020-04-27,Code 14
+34,Address 34,No,Group Home,22,2021-07-24,2021-08-07,Code 6
+35,Address 35,No,High Rise,18,2020-06-28,2020-07-22,Code 11
+36,Address 36,No,Group Home (VO),15,2020-08-31,2020-10-16,Code 1
+37,Address 37,Yes,High Rise,10,2021-05-13,2021-06-16,Code 8
+38,Address 38,No,Low Rise,21,2021-03-30,2021-05-11,Code 6
+39,Address 39,No,High Rise,10,2022-08-30,2022-09-06,Code 6
+40,Address 40,No,Low Rise,14,2021-08-22,2021-08-30,Code 6
+41,Address 41,No,Low Rise,9,2020-05-05,2020-08-10,Code 5
+42,Address 42,No,Residential Care,15,2022-10-20,2022-12-08,Code 6
+43,Address 43,No,High Rise,20,2020-04-22,2020-06-17,Code 4
+44,Address 44,Yes,Hotel & Motel,6,2021-06-06,2021-08-01,NA
+45,Address 45,No,Group Home,6,2022-09-03,2022-10-23,Code 16
+46,Address 46,No,Hospital,1,2020-03-17,2020-04-20,Code 5
+47,Address 47,Yes,Group Home (VO),17,2021-08-22,2021-11-17,Code 12
+48,Address 48,No,Low Rise,2,2020-12-08,2021-02-15,Code 18
+49,Address 49,No,Rooming House,9,2022-04-17,2022-06-06,Code 17
+50,Address 50,No,High Rise,10,2020-08-08,2020-10-13,Code 16
+51,Address 51,No,High Rise,19,2020-08-23,2020-09-03,Code 6
+52,Address 52,No,Rooming House,21,2020-11-08,2021-01-28,Code 18
+53,Address 53,No,Low Rise,10,2020-03-14,2020-04-26,Code 19
+54,Address 54,No,High Rise,23,2021-09-22,2021-12-06,Code 6
+55,Address 55,Yes,Low Rise,4,2022-11-08,2023-02-04,Code 12
+56,Address 56,Yes,Detention,24,2022-05-06,2022-07-31,Code 8
+57,Address 57,No,Hospital,23,2021-09-17,2021-12-04,Code 2
+58,Address 58,Yes,Low Rise,17,2020-12-14,2021-03-13,Code 12
+59,Address 59,No,Residential Care,19,2023-01-01,2023-01-15,Code 15
+60,Address 60,No,High Rise,13,2022-10-19,2022-12-11,NA
+61,Address 61,No,High Rise,15,2021-06-01,2021-08-13,Code 4
+62,Address 62,No,Hospital,6,2022-03-16,2022-05-07,Code 7
+63,Address 63,Yes,High Rise,7,2020-07-12,2020-09-18,Code 19
+64,Address 64,No,Low Rise,23,2021-04-13,2021-07-07,Code 13
+65,Address 65,No,Low Rise,17,2020-08-13,2020-10-19,Code 2
+66,Address 66,No,Hospital,8,2022-03-19,2022-05-02,Code 9
+67,Address 67,No,Nursing Home,12,2020-05-24,2020-07-19,Code 8
+68,Address 68,No,Group Home,3,2021-01-05,2021-02-19,Code 2
+69,Address 69,No,High Rise,NA,2021-10-05,2021-11-22,Code 11
+70,Address 70,No,Group Home (VO),25,2020-04-08,2020-05-19,Code 2
+71,Address 71,No,Residential Care,4,2020-11-07,2021-02-08,Code 15
+72,Address 72,Yes,Low Rise,14,2022-08-03,2022-08-09,Code 11
+73,Address 73,No,Nursing Home,3,2020-11-27,2021-02-04,Code 5
+74,Address 74,Yes,Low Rise,12,2022-06-07,2022-07-10,Code 3
+75,Address 75,No,High Rise,4,2020-04-09,2020-04-17,Code 2
+76,Address 76,No,Low Rise,4,2020-12-06,2020-12-14,Code 20
+77,Address 77,Yes,High Rise,1,2021-04-09,2021-05-08,Code 6
+78,Address 78,No,Low Rise,20,2022-10-08,2022-11-29,NA
+79,Address 79,No,High Rise,11,2020-08-17,2020-08-20,Code 7
+80,Address 80,No,Group Home,7,2021-05-13,2021-08-19,NA
+81,Address 81,No,Group Home (VO),8,2020-07-19,2020-10-12,Code 8
+82,Address 82,Yes,Low Rise,5,2020-04-15,2020-06-20,Code 17
+83,Address 83,No,Low Rise,6,2022-01-30,2022-04-22,Code 11
+84,Address 84,No,Group Home (VO),22,2022-12-14,2023-02-17,Code 14
+85,Address 85,Yes,Detention,8,2020-05-24,2020-07-09,Code 1
+86,Address 86,No,High Rise,16,2020-10-23,2021-01-16,Code 20
+87,Address 87,No,High Rise,10,2021-05-15,2021-06-15,Code 4
+88,Address 88,No,Residential Care,23,2022-02-01,2022-03-29,Code 6
+89,Address 89,Yes,Group Home,15,2020-03-13,2020-05-09,Code 11
+90,Address 90,No,Group Home (VO),14,2022-11-16,2023-02-22,Code 9
+91,Address 91,No,Hospital,14,2020-01-11,2020-01-25,NA
+92,Address 92,Yes,High Rise,3,2022-12-13,2023-02-09,NA
+93,Address 93,No,High Rise,21,2022-02-04,2022-04-16,Code 3
+94,Address 94,No,Group Home (VO),24,2022-08-27,2022-10-12,Code 13
+95,Address 95,No,Low Rise,19,2020-02-10,2020-03-07,Code 16
+96,Address 96,No,Group Home,16,2020-08-29,2020-11-06,Code 8
+97,Address 97,No,Low Rise,9,2021-05-07,2021-08-09,Code 17
+98,Address 98,Yes,Group Home,6,2021-01-02,2021-02-08,Code 18
+99,Address 99,Yes,High Rise,9,2020-06-01,2020-06-11,Code 1
+100,Address 100,No,Nursing Home,18,2021-12-20,2021-12-22,NA
+101,Address 101,No,Residential Care,19,2020-11-17,2020-12-26,Code 9
+102,Address 102,No,Hospital,2,2021-09-05,2021-10-20,Code 19
+103,Address 103,No,Rooming House,3,2020-01-24,2020-04-11,Code 19
+104,Address 104,No,High Rise,2,2020-05-13,2020-07-16,Code 7
+105,Address 105,Yes,High Rise,2,2022-04-10,2022-05-28,Code 19
+106,Address 106,No,Residential Care,17,2022-05-19,2022-07-19,Code 7
+107,Address 107,No,Residential Care,13,2021-12-11,2022-01-22,Code 20
+108,Address 108,No,Hotel & Motel,NA,2021-10-31,2021-11-28,Code 15
+109,Address 109,Yes,Rooming House,19,2020-08-05,2020-09-20,Code 9
+110,Address 110,No,Low Rise,19,2022-07-27,2022-08-27,Code 18
+111,Address 111,No,Group Home,1,2022-01-30,2022-02-03,Code 17
+112,Address 112,No,Hospital,14,2021-01-13,2021-04-15,Code 15
+113,Address 113,No,Group Home,5,2020-07-09,2020-07-12,Code 8
+114,Address 114,No,Detention,21,2020-04-25,2020-07-06,Code 1
+115,Address 115,No,Rooming House,8,2020-11-29,2020-12-15,Code 1
+116,Address 116,No,High Rise,4,2020-04-18,2020-05-14,Code 11
+117,Address 117,Yes,Group Home (VO),NA,2020-11-28,2021-03-07,Code 17
+118,Address 118,No,Nursing Home,8,2021-06-29,2021-08-11,Code 8
+119,Address 119,No,Low Rise,21,2020-10-23,2020-11-16,Code 20
+120,Address 120,Yes,Residential Care,18,2021-12-10,2022-03-06,Code 18
+121,Address 121,No,Detention,18,2020-02-02,2020-02-22,Code 10
+122,Address 122,No,Group Home (VO),10,2020-11-22,2020-12-04,Code 15
+123,Address 123,No,Low Rise,14,2022-12-01,2023-02-12,Code 7
+124,Address 124,No,Group Home (VO),3,2022-06-10,2022-08-13,Code 12
+125,Address 125,Yes,High Rise,21,2021-05-07,2021-06-28,Code 18
+126,Address 126,Yes,Group Home,5,2021-11-04,2021-12-16,Code 13
+127,Address 127,No,High Rise,19,2020-02-23,2020-04-23,Code 18
+128,Address 128,No,Group Home (VO),9,2022-01-25,2022-02-16,Code 13
+129,Address 129,No,Hotel & Motel,12,2022-04-25,2022-06-20,Code 7
+130,Address 130,No,Group Home,19,2022-04-05,2022-04-21,Code 1
+131,Address 131,No,Nursing Home,15,2022-03-13,2022-04-25,Code 20
+132,Address 132,No,Low Rise,14,2020-08-24,2020-10-07,Code 1
+133,Address 133,No,Detention,11,2021-01-12,2021-03-21,Code 6
+134,Address 134,No,High Rise,9,2022-11-11,2023-01-20,Code 8
+135,Address 135,No,Low Rise,1,2022-11-26,2023-01-02,Code 17
+136,Address 136,No,High Rise,5,2021-08-21,2021-09-21,Code 12
+137,Address 137,No,Group Home (VO),20,2020-05-23,2020-07-15,Code 18
+138,Address 138,Yes,High Rise,9,2022-09-10,2022-12-15,Code 6
+139,Address 139,No,High Rise,19,2022-03-17,2022-03-20,Code 10
+140,Address 140,No,Hospital,13,2021-05-05,2021-06-14,Code 14
+141,Address 141,Yes,Residential Care,14,2020-12-18,2020-12-18,Code 11
+142,Address 142,Yes,Residential Care,15,2022-08-25,2022-11-20,Code 7
+143,Address 143,No,Low Rise,9,2020-07-14,2020-10-03,Code 13
+144,Address 144,Yes,Low Rise,5,2021-02-08,2021-04-25,Code 2
+145,Address 145,Yes,High Rise,6,2021-08-20,2021-11-13,Code 19
+146,Address 146,Yes,Nursing Home,21,2022-08-15,2022-09-30,Code 15
+147,Address 147,No,Group Home (VO),8,2020-11-24,2021-01-06,Code 9
+148,Address 148,Yes,Group Home,21,2020-12-31,2021-03-17,Code 10
+149,Address 149,No,Group Home (VO),7,2020-07-06,2020-07-18,Code 2
+150,Address 150,No,High Rise,13,2021-01-25,2021-02-17,Code 16
+151,Address 151,No,Detention,6,2022-12-04,2023-01-27,Code 3
+152,Address 152,Yes,High Rise,6,2021-05-26,2021-08-27,Code 6
+153,Address 153,No,High Rise,17,2020-12-22,2020-12-23,Code 10
+154,Address 154,No,Group Home,4,2020-10-06,2020-11-22,Code 10
+155,Address 155,Yes,Group Home,10,2020-07-13,2020-10-16,Code 7
+156,Address 156,No,Nursing Home,23,2020-04-01,2020-04-30,Code 11
+157,Address 157,No,Low Rise,5,2022-09-29,2022-11-05,Code 9
+158,Address 158,No,High Rise,5,2021-01-12,2021-02-09,Code 13
+159,Address 159,Yes,Low Rise,8,2022-10-30,2023-01-05,NA
+160,Address 160,No,Residential Care,2,2021-11-19,2021-12-19,Code 10
+161,Address 161,Yes,Low Rise,11,2021-03-05,2021-06-05,Code 13
+162,Address 162,No,Hotel & Motel,22,2022-05-22,2022-06-30,Code 13
+163,Address 163,No,Low Rise,7,2022-03-03,2022-04-22,Code 15
+164,Address 164,Yes,Low Rise,18,2021-02-20,2021-04-01,Code 8
+165,Address 165,No,Group Home (VO),3,2022-06-09,2022-06-18,Code 1
+166,Address 166,Yes,Hotel & Motel,9,2022-01-28,2022-02-12,Code 6
+167,Address 167,No,Low Rise,17,2022-10-21,2022-12-28,Code 18
+168,Address 168,Yes,High Rise,9,2022-10-17,2022-11-07,Code 10
+169,Address 169,No,Group Home (VO),6,2020-04-15,2020-05-14,Code 3
+170,Address 170,No,High Rise,NA,2022-02-28,2022-05-22,Code 17
+171,Address 171,No,Low Rise,1,2022-03-12,2022-04-07,Code 5
+172,Address 172,No,Detention,22,2022-01-27,2022-02-23,Code 20
+173,Address 173,No,High Rise,19,2022-02-16,2022-04-22,Code 18
+174,Address 174,No,Hotel & Motel,7,2021-06-28,2021-09-12,Code 11
+175,Address 175,No,High Rise,23,2022-04-10,2022-05-18,Code 12
+176,Address 176,No,High Rise,5,2022-11-23,2022-12-16,Code 8
+177,Address 177,Yes,High Rise,21,2021-04-27,2021-06-28,Code 6
+178,Address 178,Yes,Low Rise,21,2020-04-17,2020-05-26,Code 18
+179,Address 179,Yes,Group Home (VO),15,2022-05-18,2022-06-11,Code 1
+180,Address 180,Yes,Group Home,NA,2020-12-16,2021-01-05,Code 5
+181,Address 181,No,Group Home,14,2020-11-01,2021-01-27,Code 4
+182,Address 182,Yes,High Rise,10,2020-12-23,2021-02-28,Code 13
+183,Address 183,No,Nursing Home,20,2022-11-28,2023-01-26,Code 10
+184,Address 184,No,High Rise,6,2020-09-30,2020-11-23,Code 7
+185,Address 185,No,Low Rise,13,2021-04-23,2021-05-20,Code 5
+186,Address 186,No,Low Rise,12,2021-04-04,2021-05-20,Code 3
+187,Address 187,Yes,Detention,18,2022-08-28,2022-10-20,Code 8
+188,Address 188,Yes,Low Rise,3,2020-07-17,2020-07-27,Code 7
+189,Address 189,No,Group Home (VO),18,2022-02-18,2022-03-04,Code 1
+190,Address 190,Yes,Low Rise,10,2020-10-13,2020-11-29,NA
+191,Address 191,No,Low Rise,16,2021-08-27,2021-10-23,Code 17
+192,Address 192,No,Group Home (VO),8,2022-05-06,2022-08-07,Code 2
+193,Address 193,No,Nursing Home,25,2020-09-12,2020-12-08,NA
+194,Address 194,No,Group Home,8,2020-12-30,2021-04-04,Code 6
+195,Address 195,Yes,Residential Care,21,2022-09-26,2022-11-20,Code 19
+196,Address 196,No,Residential Care,25,2022-11-12,2022-11-27,Code 11
+197,Address 197,Yes,Residential Care,9,2022-05-07,2022-06-17,Code 3
+198,Address 198,No,Group Home,20,2020-05-24,2020-07-24,NA
+199,Address 199,Yes,Low Rise,21,2021-04-15,2021-06-01,Code 17
+200,Address 200,No,Low Rise,23,2020-03-04,2020-05-13,Code 12
+201,Address 201,No,Nursing Home,14,2021-04-26,2021-07-26,NA
+202,Address 202,Yes,Low Rise,3,2020-10-13,2020-12-13,NA
+203,Address 203,Yes,Low Rise,4,2022-01-23,2022-03-14,Code 7
+204,Address 204,No,High Rise,15,2020-12-15,2020-12-28,NA
+205,Address 205,No,Low Rise,21,2022-08-29,2022-09-09,Code 16
+206,Address 206,Yes,High Rise,17,2022-08-23,2022-09-01,Code 12
+207,Address 207,No,Rooming House,23,2022-04-17,2022-04-19,Code 13
+208,Address 208,No,Group Home (VO),NA,2021-12-09,2022-01-17,Code 4
+209,Address 209,No,Low Rise,10,2022-07-06,2022-08-04,Code 4
+210,Address 210,No,Hotel & Motel,21,2022-03-22,2022-03-28,Code 14
+211,Address 211,No,Group Home (VO),4,2022-01-12,2022-03-29,Code 9
+212,Address 212,No,High Rise,17,2022-12-10,2023-03-18,Code 17
+213,Address 213,Yes,High Rise,13,2021-09-18,2021-11-13,Code 14
+214,Address 214,No,Rooming House,18,2022-04-22,2022-05-12,Code 5
+215,Address 215,Yes,High Rise,NA,2021-04-20,2021-04-22,Code 16
+216,Address 216,Yes,Detention,18,2021-10-27,2021-12-23,Code 14
+217,Address 217,No,High Rise,4,2022-04-24,2022-06-27,Code 11
+218,Address 218,No,High Rise,1,2022-07-31,2022-10-09,Code 17
+219,Address 219,No,High Rise,15,2021-08-19,2021-11-06,Code 16
+220,Address 220,No,Detention,22,2020-11-06,2021-01-07,Code 17
+221,Address 221,No,High Rise,17,2020-06-19,2020-08-20,Code 7
+222,Address 222,Yes,High Rise,9,2022-07-15,2022-07-31,Code 14
+223,Address 223,No,Group Home,NA,2020-09-04,2020-12-08,NA
+224,Address 224,No,High Rise,NA,2020-01-28,2020-04-10,Code 15
+225,Address 225,No,Group Home (VO),8,2022-02-05,2022-04-10,Code 2
+226,Address 226,No,Low Rise,10,2021-12-30,2022-02-05,NA
+227,Address 227,No,Low Rise,2,2021-02-15,2021-04-20,Code 2
+228,Address 228,No,High Rise,5,2021-01-27,2021-02-24,Code 6
+229,Address 229,No,Hotel & Motel,24,2021-10-02,2021-10-30,Code 20
+230,Address 230,No,Hospital,7,2020-07-10,2020-07-18,Code 2
+231,Address 231,Yes,Low Rise,13,2020-02-08,2020-05-05,NA
+232,Address 232,No,High Rise,12,2020-02-17,2020-05-23,Code 16
+233,Address 233,No,Nursing Home,5,2020-05-14,2020-07-07,Code 14
+234,Address 234,No,Nursing Home,17,2021-07-25,2021-08-08,Code 6
+235,Address 235,No,High Rise,4,2020-08-16,2020-09-10,Code 4
+236,Address 236,No,Hotel & Motel,17,2020-10-11,2020-11-22,Code 20
+237,Address 237,No,Low Rise,NA,2022-03-25,2022-05-27,Code 1
+238,Address 238,No,Residential Care,22,2022-07-29,2022-08-25,Code 3
+239,Address 239,Yes,High Rise,10,2021-09-11,2021-11-18,Code 17
+240,Address 240,No,Low Rise,12,2021-05-27,2021-06-08,Code 7
+241,Address 241,Yes,Low Rise,19,2021-05-13,2021-07-08,Code 9
+242,Address 242,No,Nursing Home,20,2020-08-24,2020-09-16,Code 15
+243,Address 243,No,Residential Care,12,2020-05-30,2020-08-06,Code 9
+244,Address 244,No,High Rise,22,2020-11-07,2021-02-11,Code 14
+245,Address 245,No,Group Home (VO),4,2021-01-29,2021-05-07,Code 4
+246,Address 246,Yes,Rooming House,5,2020-11-04,2021-02-11,Code 6
+247,Address 247,No,Group Home (VO),11,2021-08-30,2021-09-20,Code 7
+248,Address 248,No,High Rise,8,2020-07-31,2020-08-07,Code 9
+249,Address 249,No,Residential Care,4,2021-04-08,2021-06-12,Code 19
+250,Address 250,Yes,Group Home (VO),20,2021-08-05,2021-11-08,Code 14
+251,Address 251,Yes,Group Home,7,2020-04-17,2020-07-19,Code 11
+252,Address 252,Yes,High Rise,20,2021-08-17,2021-10-17,Code 2
+253,Address 253,No,Low Rise,9,2020-10-08,2020-11-29,Code 17
+254,Address 254,No,Group Home (VO),14,2022-06-12,2022-07-25,Code 11
+255,Address 255,No,Nursing Home,15,2021-04-11,2021-07-06,Code 7
+256,Address 256,No,Residential Care,8,2020-01-30,2020-03-28,Code 5
+257,Address 257,No,Low Rise,15,2020-07-25,2020-09-07,NA
+258,Address 258,No,Rooming House,25,2021-07-30,2021-08-28,Code 4
+259,Address 259,No,Hospital,18,2021-04-25,2021-06-12,Code 14
+260,Address 260,Yes,Group Home (VO),10,2021-09-15,2021-12-07,Code 7
+261,Address 261,No,Rooming House,4,2021-07-11,2021-09-18,Code 3
+262,Address 262,Yes,Nursing Home,17,2020-01-23,2020-04-10,Code 4
+263,Address 263,No,Low Rise,3,2022-01-02,2022-03-21,Code 5
+264,Address 264,Yes,Low Rise,9,2021-04-05,2021-05-26,Code 2
+265,Address 265,Yes,Hotel & Motel,5,2022-11-20,2023-02-14,Code 11
+266,Address 266,No,Nursing Home,23,2022-01-01,2022-03-15,Code 9
+267,Address 267,No,High Rise,NA,2021-06-05,2021-06-18,Code 10
+268,Address 268,Yes,Group Home (VO),11,2021-08-29,2021-11-09,Code 14
+269,Address 269,No,High Rise,16,2022-03-15,2022-06-15,Code 19
+270,Address 270,No,High Rise,8,2020-09-08,2020-10-26,Code 8
+271,Address 271,No,Low Rise,24,2020-11-05,2021-01-27,Code 8
+272,Address 272,No,Detention,16,2022-11-03,2022-12-01,Code 12
+273,Address 273,No,Low Rise,18,2020-12-06,2020-12-11,Code 6
+274,Address 274,Yes,Group Home,25,2022-08-31,2022-09-20,NA
+275,Address 275,Yes,Group Home (VO),22,2022-09-18,2022-11-11,Code 20
+276,Address 276,No,Rooming House,14,2021-01-04,2021-02-25,Code 2
+277,Address 277,No,Group Home,25,2021-08-24,2021-09-07,Code 11
+278,Address 278,No,High Rise,15,2020-09-12,2020-10-01,Code 12
+279,Address 279,No,Group Home,24,2020-01-24,2020-04-30,Code 6
+280,Address 280,Yes,Group Home (VO),11,2020-12-11,2021-01-09,Code 3
+281,Address 281,No,High Rise,23,2020-02-18,2020-05-16,Code 1
+282,Address 282,Yes,Low Rise,6,2022-10-28,2023-01-07,Code 17
+283,Address 283,No,Low Rise,18,2022-11-08,2023-01-25,Code 16
+284,Address 284,No,High Rise,21,2021-01-05,2021-01-07,Code 1
+285,Address 285,No,Residential Care,17,2021-11-10,2022-01-30,Code 14
+286,Address 286,No,Low Rise,15,2022-02-15,2022-05-08,Code 14
+287,Address 287,Yes,High Rise,14,2021-06-26,2021-08-05,Code 15
+288,Address 288,No,Group Home (VO),6,2021-05-23,2021-08-28,Code 15
+289,Address 289,No,Group Home,21,2020-02-14,2020-03-16,Code 14
+290,Address 290,No,Low Rise,7,2020-02-07,2020-04-04,Code 20
+291,Address 291,No,Low Rise,12,2021-05-30,2021-08-24,Code 13
+292,Address 292,No,High Rise,5,2021-07-19,2021-10-12,Code 15
+293,Address 293,No,Residential Care,24,2020-01-12,2020-04-08,NA
+294,Address 294,No,Hospital,25,2021-09-11,2021-11-26,Code 14
+295,Address 295,No,Group Home (VO),21,2022-05-01,2022-05-07,NA
+296,Address 296,Yes,High Rise,6,2022-05-02,2022-05-22,NA
+297,Address 297,No,Hotel & Motel,15,2022-10-28,2022-11-15,Code 16
+298,Address 298,No,High Rise,2,2021-05-21,2021-06-23,Code 16
+299,Address 299,Yes,Residential Care,4,2022-10-27,2022-12-26,Code 8
+300,Address 300,No,Detention,1,2021-05-16,2021-06-21,Code 9
+301,Address 301,No,Nursing Home,8,2021-07-04,2021-07-25,Code 6
+302,Address 302,No,Hospital,11,2020-10-22,2020-10-28,Code 6
+303,Address 303,No,High Rise,5,2022-02-16,2022-03-28,Code 11
+304,Address 304,No,Low Rise,13,2021-09-05,2021-12-03,Code 4
+305,Address 305,Yes,Low Rise,17,2021-06-18,2021-07-12,Code 13
+306,Address 306,No,Group Home,NA,2020-02-17,2020-05-18,Code 14
+307,Address 307,No,Hotel & Motel,14,2021-10-09,2021-12-16,Code 18
+308,Address 308,No,Low Rise,17,2021-11-05,2021-11-13,Code 10
+309,Address 309,No,Low Rise,23,2022-08-17,2022-09-16,Code 11
+310,Address 310,No,Hotel & Motel,11,2022-09-19,2022-12-02,Code 19
+311,Address 311,No,Detention,2,2022-05-25,2022-06-07,Code 6
+312,Address 312,No,High Rise,23,2020-04-08,2020-07-16,Code 8
+313,Address 313,No,Nursing Home,10,2020-03-29,2020-06-22,Code 14
+314,Address 314,Yes,Hotel & Motel,19,2021-07-03,2021-08-05,Code 11
+315,Address 315,No,Hospital,9,2020-03-29,2020-05-29,Code 15
+316,Address 316,Yes,High Rise,24,2021-09-05,2021-10-13,Code 14
+317,Address 317,No,Hotel & Motel,15,2022-01-16,2022-03-10,Code 20
+318,Address 318,No,High Rise,NA,2022-06-08,2022-09-04,Code 19
+319,Address 319,Yes,High Rise,11,2022-09-12,2022-12-18,Code 1
+320,Address 320,No,Low Rise,21,2020-01-11,2020-02-02,Code 13
+321,Address 321,No,Hospital,21,2020-11-17,2020-12-26,Code 19
+322,Address 322,No,Hotel & Motel,25,2020-04-28,2020-06-02,Code 2
+323,Address 323,Yes,Low Rise,18,2020-12-03,2021-01-06,NA
+324,Address 324,No,Hotel & Motel,8,2021-03-23,2021-06-25,Code 20
+325,Address 325,Yes,Hospital,11,2021-01-22,2021-02-02,Code 3
+326,Address 326,Yes,Group Home,NA,2022-06-02,2022-08-03,Code 15
+327,Address 327,No,Low Rise,2,2022-05-24,2022-06-01,Code 20
+328,Address 328,No,Group Home,9,2022-01-23,2022-03-13,Code 8
+329,Address 329,No,Low Rise,16,2021-08-22,2021-11-14,Code 17
+330,Address 330,No,High Rise,19,2022-06-02,2022-06-10,Code 19
+331,Address 331,Yes,Residential Care,13,2020-04-13,2020-06-09,Code 4
+332,Address 332,No,High Rise,20,2021-03-20,2021-06-28,Code 9
+333,Address 333,No,Group Home (VO),11,2021-01-24,2021-04-22,Code 14
+334,Address 334,No,High Rise,9,2020-06-03,2020-06-26,Code 13
+335,Address 335,No,High Rise,10,2021-12-01,2021-12-18,Code 1
+336,Address 336,No,Nursing Home,9,2020-04-28,2020-05-17,Code 16
+337,Address 337,No,Residential Care,11,2021-06-15,2021-06-23,Code 12
+338,Address 338,No,High Rise,17,2020-04-09,2020-05-31,Code 5
+339,Address 339,No,Low Rise,25,2021-06-11,2021-09-14,Code 15
+340,Address 340,Yes,High Rise,12,2020-08-28,2020-11-29,Code 4
+341,Address 341,No,High Rise,5,2020-08-28,2020-10-04,Code 6
+342,Address 342,Yes,Hotel & Motel,20,2020-12-17,2021-01-20,Code 9
+343,Address 343,No,Rooming House,4,2020-06-19,2020-07-28,NA
+344,Address 344,Yes,Hotel & Motel,5,2020-06-10,2020-08-29,Code 9
+345,Address 345,Yes,Group Home,12,2022-10-31,2023-01-11,NA
+346,Address 346,Yes,Rooming House,20,2022-12-19,2023-02-19,NA
+347,Address 347,No,Detention,24,2022-09-02,2022-10-04,Code 3
+348,Address 348,No,High Rise,9,2021-11-22,2022-01-17,Code 9
+349,Address 349,Yes,High Rise,6,2022-12-11,2023-03-06,Code 18
+350,Address 350,No,Residential Care,24,2020-07-02,2020-09-03,Code 15
+351,Address 351,No,Rooming House,25,2020-09-22,2020-12-24,Code 2
+352,Address 352,No,High Rise,11,2021-06-03,2021-07-25,Code 11
+353,Address 353,No,Hospital,11,2021-01-28,2021-04-01,Code 19
+354,Address 354,Yes,Group Home (VO),6,2020-09-16,2020-10-09,Code 16
+355,Address 355,Yes,Group Home,10,2022-05-20,2022-08-27,Code 10
+356,Address 356,Yes,High Rise,1,2020-11-27,2020-12-09,Code 18
+357,Address 357,No,Group Home (VO),17,2020-04-26,2020-05-19,Code 6
+358,Address 358,No,High Rise,13,2021-04-18,2021-06-18,Code 14
+359,Address 359,No,High Rise,20,2022-04-09,2022-05-08,Code 12
+360,Address 360,No,Rooming House,12,2022-12-04,2023-03-07,Code 10
+361,Address 361,No,Group Home (VO),25,2020-10-17,2020-11-17,Code 19
+362,Address 362,No,High Rise,10,2021-01-30,2021-04-27,Code 4
+363,Address 363,No,Low Rise,20,2020-12-24,2021-01-04,Code 1
+364,Address 364,Yes,Group Home,15,2021-01-14,2021-04-06,Code 18
+365,Address 365,No,Group Home,9,2020-06-28,2020-09-23,Code 16
+366,Address 366,No,High Rise,20,2021-04-06,2021-07-04,Code 6
+367,Address 367,No,Low Rise,19,2020-04-03,2020-05-03,NA
+368,Address 368,No,Low Rise,13,2020-08-26,2020-11-30,Code 3
+369,Address 369,Yes,Low Rise,8,2022-04-12,2022-07-05,Code 19
+370,Address 370,Yes,Group Home (VO),6,2020-05-29,2020-08-13,Code 9
+371,Address 371,Yes,Low Rise,3,2020-03-11,2020-05-05,NA
+372,Address 372,Yes,Hospital,24,2022-06-02,2022-08-21,Code 6
+373,Address 373,Yes,Hotel & Motel,NA,2022-07-19,2022-08-13,Code 10
+374,Address 374,No,Low Rise,2,2022-12-04,2022-12-12,Code 18
+375,Address 375,No,Low Rise,16,2020-11-01,2020-12-16,Code 2
+376,Address 376,No,Hotel & Motel,10,2021-11-12,2022-01-19,Code 20
+377,Address 377,Yes,Residential Care,11,2021-01-20,2021-03-20,Code 16
+378,Address 378,No,High Rise,19,2022-06-26,2022-07-11,Code 16
+379,Address 379,No,Residential Care,2,2020-07-16,2020-08-12,Code 17
+380,Address 380,Yes,Hospital,21,2022-09-14,2022-10-23,Code 10
+381,Address 381,No,High Rise,19,2020-11-25,2020-12-17,Code 4
+382,Address 382,No,High Rise,5,2021-11-07,2021-11-29,Code 17
+383,Address 383,Yes,Group Home,10,2021-07-30,2021-10-07,Code 20
+384,Address 384,No,High Rise,2,2022-08-29,2022-10-24,Code 10
+385,Address 385,Yes,Group Home (VO),18,2022-11-16,2023-02-18,Code 4
+386,Address 386,Yes,High Rise,18,2022-11-21,2022-12-16,Code 16
+387,Address 387,No,Group Home (VO),15,2022-05-06,2022-08-06,Code 12
+388,Address 388,No,Detention,13,2020-06-18,2020-09-11,Code 17
+389,Address 389,Yes,Residential Care,NA,2022-09-03,2022-09-03,Code 15
+390,Address 390,Yes,Group Home (VO),24,2020-03-23,2020-04-30,NA
+391,Address 391,No,High Rise,3,2020-08-05,2020-09-09,Code 20
+392,Address 392,Yes,High Rise,15,2021-02-21,2021-03-31,Code 6
+393,Address 393,No,Low Rise,19,2022-07-02,2022-08-01,Code 2
+394,Address 394,No,Group Home,23,2021-12-06,2022-02-03,Code 1
+395,Address 395,No,Residential Care,18,2022-04-19,2022-07-14,Code 14
+396,Address 396,No,Low Rise,7,2020-07-02,2020-09-29,Code 2
+397,Address 397,No,Low Rise,7,2022-10-02,2022-11-22,Code 17
+398,Address 398,No,High Rise,1,2022-09-17,2022-10-17,Code 18
+399,Address 399,Yes,Low Rise,7,2020-01-15,2020-01-23,Code 13
+400,Address 400,No,Hotel & Motel,13,2022-12-03,2023-01-26,Code 8
+401,Address 401,No,Residential Care,23,2020-02-20,2020-04-27,Code 18
+402,Address 402,No,Low Rise,13,2021-12-31,2022-04-06,Code 4
+403,Address 403,No,Group Home (VO),16,2021-08-13,2021-09-16,Code 3
+404,Address 404,No,Residential Care,10,2020-03-30,2020-05-12,Code 6
+405,Address 405,No,Nursing Home,24,2021-11-16,2022-02-18,Code 15
+406,Address 406,No,High Rise,9,2020-12-20,2021-03-22,NA
+407,Address 407,No,Rooming House,17,2021-09-12,2021-10-10,Code 6
+408,Address 408,No,Low Rise,3,2022-01-12,2022-03-19,Code 8
+409,Address 409,Yes,High Rise,21,2020-12-15,2021-02-27,Code 9
+410,Address 410,No,High Rise,5,2022-04-06,2022-07-05,Code 13
+411,Address 411,No,Low Rise,23,2020-01-06,2020-02-10,NA
+412,Address 412,No,Low Rise,16,2022-01-29,2022-04-17,Code 9
+413,Address 413,No,High Rise,15,2022-12-30,2023-04-08,Code 2
+414,Address 414,No,Low Rise,3,2020-03-20,2020-05-21,Code 2
+415,Address 415,Yes,High Rise,5,2022-07-08,2022-08-31,Code 3
+416,Address 416,No,High Rise,25,2021-02-01,2021-04-01,Code 4
+417,Address 417,No,Hotel & Motel,8,2022-10-29,2022-11-06,Code 7
+418,Address 418,No,Group Home,25,2020-09-13,2020-11-21,Code 1
+419,Address 419,No,High Rise,1,2021-06-13,2021-06-28,Code 17
+420,Address 420,No,Low Rise,6,2020-05-08,2020-06-22,Code 17
+421,Address 421,No,Detention,8,2022-01-09,2022-03-04,NA
+422,Address 422,No,Rooming House,19,2021-07-14,2021-08-28,Code 20
+423,Address 423,No,Nursing Home,3,2020-06-04,2020-06-07,NA
+424,Address 424,No,Group Home,18,2022-05-05,2022-06-01,Code 5
+425,Address 425,No,Hospital,24,2020-11-05,2020-12-07,NA
+426,Address 426,No,Detention,20,2021-07-20,2021-09-28,Code 18
+427,Address 427,No,Group Home,9,2020-04-09,2020-05-17,Code 11
+428,Address 428,No,Low Rise,16,2022-12-16,2023-02-10,Code 10
+429,Address 429,Yes,High Rise,14,2020-09-28,2020-09-30,Code 9
+430,Address 430,No,High Rise,22,2022-11-11,2022-12-04,Code 15
+431,Address 431,Yes,Hotel & Motel,5,2022-08-02,2022-08-30,Code 18
+432,Address 432,No,Group Home,18,2020-03-15,2020-04-05,Code 3
+433,Address 433,No,High Rise,24,2021-01-07,2021-02-13,Code 19
+434,Address 434,No,Group Home,2,2022-05-21,2022-07-07,Code 9
+435,Address 435,No,High Rise,10,2021-12-06,2022-02-04,Code 9
+436,Address 436,Yes,High Rise,NA,2020-02-19,2020-05-22,Code 16
+437,Address 437,Yes,Rooming House,15,2021-07-28,2021-08-04,Code 6
+438,Address 438,No,Rooming House,NA,2021-12-29,2022-01-08,Code 19
+439,Address 439,No,Detention,4,2022-11-13,2022-11-23,Code 7
+440,Address 440,No,Low Rise,25,2021-01-02,2021-01-26,Code 18
+441,Address 441,No,Group Home (VO),2,2021-09-23,2021-11-21,Code 11
+442,Address 442,Yes,High Rise,11,2021-06-06,2021-06-06,Code 4
+443,Address 443,No,High Rise,18,2021-02-14,2021-03-05,Code 2
+444,Address 444,Yes,High Rise,5,2021-04-24,2021-05-31,Code 11
+445,Address 445,No,Group Home (VO),21,2020-03-13,2020-04-23,Code 3
+446,Address 446,No,Group Home (VO),4,2022-07-12,2022-08-15,Code 16
+447,Address 447,No,Group Home,10,2020-03-06,2020-03-11,Code 19
+448,Address 448,No,Low Rise,16,2021-10-20,2021-12-29,Code 2
+449,Address 449,No,Hospital,8,2022-01-22,2022-02-22,Code 11
+450,Address 450,Yes,Group Home,3,2021-07-25,2021-09-05,Code 16
+451,Address 451,No,High Rise,21,2022-01-17,2022-04-22,Code 6
+452,Address 452,Yes,Group Home,1,2021-07-02,2021-07-13,Code 6
+453,Address 453,Yes,High Rise,12,2021-07-13,2021-08-19,Code 13
+454,Address 454,No,Detention,23,2020-02-15,2020-05-23,Code 13
+455,Address 455,No,Group Home (VO),8,2020-05-17,2020-08-05,Code 12
+456,Address 456,Yes,Group Home (VO),8,2022-04-16,2022-04-19,Code 9
+457,Address 457,No,High Rise,2,2022-07-27,2022-08-24,Code 4
+458,Address 458,Yes,High Rise,5,2021-04-13,2021-07-22,Code 17
+459,Address 459,No,Detention,23,2020-04-09,2020-04-14,Code 15
+460,Address 460,No,High Rise,14,2022-06-14,2022-08-19,Code 6
+461,Address 461,No,Residential Care,16,2021-10-01,2021-10-14,Code 8
+462,Address 462,No,Hotel & Motel,15,2022-08-03,2022-08-05,Code 1
+463,Address 463,No,Low Rise,14,2022-02-19,2022-03-20,Code 10
+464,Address 464,Yes,Hotel & Motel,2,2020-10-04,2020-10-10,NA
+465,Address 465,No,Residential Care,1,2021-09-10,2021-10-20,Code 8
+466,Address 466,No,Nursing Home,23,2020-07-15,2020-07-29,Code 20
+467,Address 467,Yes,Residential Care,17,2022-03-08,2022-05-19,Code 3
+468,Address 468,No,Group Home (VO),17,2020-02-06,2020-03-15,Code 4
+469,Address 469,No,High Rise,NA,2021-02-20,2021-05-10,Code 12
+470,Address 470,Yes,Nursing Home,10,2022-05-11,2022-07-18,Code 5
+471,Address 471,No,Low Rise,11,2021-10-14,2021-12-19,Code 8
+472,Address 472,No,Rooming House,19,2021-04-27,2021-07-25,Code 18
+473,Address 473,No,High Rise,4,2020-07-26,2020-08-18,Code 16
+474,Address 474,No,Group Home,14,2021-12-03,2022-02-08,Code 11
+475,Address 475,No,High Rise,NA,2020-06-28,2020-08-11,Code 4
+476,Address 476,No,High Rise,24,2021-10-25,2021-11-18,Code 11
+477,Address 477,No,High Rise,15,2022-09-17,2022-09-17,Code 16
+478,Address 478,Yes,High Rise,14,2020-11-24,2021-03-02,Code 3
+479,Address 479,No,Detention,21,2020-01-06,2020-04-12,Code 3
+480,Address 480,No,Group Home,10,2022-07-11,2022-09-16,Code 2
+481,Address 481,Yes,Residential Care,4,2021-03-09,2021-05-26,Code 4
+482,Address 482,No,Detention,22,2020-03-01,2020-03-31,Code 12
+483,Address 483,No,High Rise,23,2020-08-31,2020-11-20,Code 6
+484,Address 484,Yes,Detention,18,2021-01-04,2021-02-10,Code 11
+485,Address 485,Yes,Rooming House,8,2022-07-18,2022-10-16,Code 6
+486,Address 486,Yes,High Rise,17,2020-10-04,2020-11-09,Code 12
+487,Address 487,No,Detention,24,2022-04-03,2022-05-23,Code 11
+488,Address 488,No,Hotel & Motel,8,2020-03-26,2020-03-27,Code 17
+489,Address 489,No,Hospital,18,2020-01-20,2020-04-10,Code 11
+490,Address 490,No,Group Home (VO),7,2022-12-09,2022-12-27,Code 16
+491,Address 491,No,Group Home (VO),5,2021-01-31,2021-03-24,Code 14
+492,Address 492,Yes,Low Rise,15,2021-11-19,2021-12-27,Code 7
+493,Address 493,No,High Rise,3,2021-05-02,2021-05-16,Code 1
+494,Address 494,No,Residential Care,12,2022-01-15,2022-01-16,Code 19
+495,Address 495,No,Hotel & Motel,14,2022-03-03,2022-04-20,Code 3
+496,Address 496,No,Nursing Home,8,2020-10-29,2021-01-31,Code 17
+497,Address 497,No,Rooming House,14,2020-08-17,2020-11-03,Code 19
+498,Address 498,Yes,Hotel & Motel,19,2022-05-24,2022-08-08,Code 6
+499,Address 499,No,Detention,10,2020-08-04,2020-08-10,Code 19
+500,Address 500,No,Low Rise,15,2022-03-03,2022-06-02,Code 10
+501,Address 501,No,Group Home (VO),24,2020-03-26,2020-05-26,Code 17
+502,Address 502,No,Group Home (VO),4,2020-11-18,2020-11-27,Code 10
+503,Address 503,Yes,High Rise,4,2020-09-16,2020-10-03,Code 7
+504,Address 504,No,High Rise,7,2021-10-28,2021-12-28,Code 1
+505,Address 505,No,Hospital,21,2021-09-02,2021-10-18,Code 16
+506,Address 506,No,High Rise,9,2022-10-17,2023-01-18,Code 10
+507,Address 507,Yes,High Rise,21,2020-02-03,2020-02-27,Code 19
+508,Address 508,No,High Rise,23,2020-10-16,2020-12-10,Code 14
+509,Address 509,No,Group Home (VO),15,2021-12-14,2022-02-09,Code 7
+510,Address 510,No,Residential Care,8,2020-08-28,2020-11-22,Code 4
+511,Address 511,No,Group Home,11,2020-03-22,2020-04-16,Code 15
+512,Address 512,Yes,Low Rise,4,2020-06-17,2020-09-12,Code 6
+513,Address 513,No,High Rise,23,2020-03-09,2020-05-15,Code 4
+514,Address 514,Yes,High Rise,8,2022-07-16,2022-09-18,Code 9
+515,Address 515,Yes,Hotel & Motel,10,2020-11-05,2020-11-05,NA
+516,Address 516,No,High Rise,17,2022-12-20,2023-01-26,Code 3
+517,Address 517,No,Hospital,NA,2020-04-17,2020-05-26,Code 3
+518,Address 518,No,Group Home,24,2020-07-08,2020-10-15,Code 16
+519,Address 519,No,Detention,17,2022-03-15,2022-03-17,Code 7
+520,Address 520,No,High Rise,22,2021-03-28,2021-06-29,Code 5
+521,Address 521,No,Low Rise,5,2022-07-18,2022-08-24,Code 16
+522,Address 522,No,High Rise,9,2022-11-11,2023-01-13,NA
+523,Address 523,No,Nursing Home,8,2021-10-26,2022-01-06,Code 4
+524,Address 524,No,High Rise,22,2021-09-02,2021-11-22,NA
+525,Address 525,Yes,High Rise,17,2020-05-21,2020-05-24,Code 7
+526,Address 526,No,Low Rise,20,2020-08-01,2020-09-11,Code 13
+527,Address 527,Yes,Residential Care,22,2022-03-04,2022-04-18,Code 7
+528,Address 528,No,Detention,5,2020-12-08,2020-12-08,Code 7
+529,Address 529,No,High Rise,3,2022-10-03,2022-10-26,Code 12
+530,Address 530,Yes,High Rise,NA,2020-07-13,2020-09-01,Code 11
+531,Address 531,No,Group Home (VO),19,2021-11-23,2022-02-17,Code 5
+532,Address 532,No,Low Rise,13,2021-09-24,2021-12-03,Code 9
+533,Address 533,Yes,High Rise,7,2020-07-30,2020-09-20,Code 5
+534,Address 534,Yes,Low Rise,9,2022-04-21,2022-05-28,NA
+535,Address 535,No,Nursing Home,16,2021-03-05,2021-06-11,Code 11
+536,Address 536,Yes,High Rise,20,2021-06-17,2021-08-24,Code 4
+537,Address 537,Yes,Group Home (VO),NA,2020-04-30,2020-07-21,Code 14
+538,Address 538,No,Low Rise,11,2020-03-06,2020-05-20,Code 9
+539,Address 539,Yes,Rooming House,17,2022-03-13,2022-04-07,NA
+540,Address 540,No,Hotel & Motel,18,2020-04-21,2020-05-28,Code 15
+541,Address 541,No,Low Rise,17,2021-02-11,2021-03-03,Code 2
+542,Address 542,No,Low Rise,22,2021-10-19,2022-01-25,Code 6
+543,Address 543,No,Group Home,19,2020-01-14,2020-03-02,Code 19
+544,Address 544,Yes,Group Home (VO),9,2021-06-17,2021-07-30,NA
+545,Address 545,No,Nursing Home,12,2020-10-09,2020-11-19,Code 18
+546,Address 546,No,Group Home (VO),14,2020-11-09,2020-12-08,Code 1
+547,Address 547,No,High Rise,12,2021-05-30,2021-08-19,NA
+548,Address 548,Yes,Hotel & Motel,12,2022-03-13,2022-03-28,Code 8
+549,Address 549,Yes,Hotel & Motel,10,2022-07-21,2022-09-16,Code 9
+550,Address 550,No,Low Rise,10,2020-03-23,2020-06-20,Code 17
+551,Address 551,No,Group Home,17,2021-03-20,2021-05-15,Code 2
+552,Address 552,Yes,Hospital,24,2022-03-12,2022-05-04,Code 3
+553,Address 553,Yes,Detention,11,2021-04-19,2021-04-20,Code 15
+554,Address 554,No,Detention,2,2020-01-18,2020-04-11,Code 14
+555,Address 555,No,Residential Care,11,2021-10-30,2022-01-28,Code 2
+556,Address 556,No,High Rise,2,2022-10-31,2023-01-29,Code 13
+557,Address 557,No,Low Rise,NA,2020-01-22,2020-02-19,Code 14
+558,Address 558,No,Group Home (VO),6,2021-04-27,2021-06-07,Code 4
+559,Address 559,Yes,Detention,6,2022-09-17,2022-12-18,Code 20
+560,Address 560,No,High Rise,2,2021-06-07,2021-07-24,Code 17
+561,Address 561,Yes,Detention,NA,2021-12-29,2022-04-03,NA
+562,Address 562,Yes,Detention,5,2022-05-29,2022-07-27,Code 5
+563,Address 563,No,Hotel & Motel,1,2020-06-16,2020-07-31,Code 12
+564,Address 564,No,Low Rise,9,2022-11-12,2022-11-27,Code 8
+565,Address 565,No,High Rise,19,2020-09-23,2020-11-24,Code 19
+566,Address 566,No,Low Rise,16,2022-06-15,2022-08-16,Code 8
+567,Address 567,No,Low Rise,11,2022-01-23,2022-03-29,Code 7
+568,Address 568,No,Low Rise,16,2021-12-08,2021-12-27,NA
+569,Address 569,No,Rooming House,24,2021-02-21,2021-05-23,Code 8
+570,Address 570,Yes,High Rise,25,2022-03-01,2022-03-21,Code 15
+571,Address 571,No,High Rise,13,2020-04-02,2020-04-13,Code 7
+572,Address 572,Yes,Detention,9,2021-10-08,2021-10-28,Code 8
+573,Address 573,Yes,Low Rise,16,2021-02-19,2021-02-28,Code 15
+574,Address 574,Yes,High Rise,13,2021-09-03,2021-09-03,NA
+575,Address 575,Yes,Rooming House,6,2021-07-21,2021-08-06,Code 9
+576,Address 576,No,Low Rise,10,2021-05-30,2021-07-27,NA
+577,Address 577,Yes,Group Home,23,2022-11-25,2022-12-26,Code 3
+578,Address 578,No,Group Home (VO),11,2020-12-07,2021-01-21,Code 13
+579,Address 579,No,Low Rise,14,2020-02-28,2020-03-11,Code 17
+580,Address 580,No,Low Rise,15,2022-05-27,2022-08-30,Code 14
+581,Address 581,No,Group Home (VO),3,2022-02-28,2022-05-30,Code 15
+582,Address 582,Yes,High Rise,7,2020-03-21,2020-04-09,Code 1
+583,Address 583,No,Detention,5,2020-07-29,2020-08-23,Code 13
+584,Address 584,Yes,High Rise,2,2021-08-05,2021-08-25,Code 12
+585,Address 585,No,Low Rise,1,2022-01-30,2022-03-01,Code 3
+586,Address 586,No,Low Rise,10,2022-12-06,2023-02-20,Code 18
+587,Address 587,No,Group Home,NA,2022-03-29,2022-06-11,Code 7
+588,Address 588,No,Rooming House,11,2022-09-08,2022-12-11,Code 19
+589,Address 589,No,Residential Care,5,2021-04-15,2021-06-29,Code 13
+590,Address 590,No,Group Home (VO),14,2021-01-16,2021-03-17,Code 3
+591,Address 591,Yes,High Rise,22,2022-07-24,2022-10-16,Code 17
+592,Address 592,No,Group Home,4,2020-10-09,2020-12-16,NA
+593,Address 593,No,Detention,25,2020-09-18,2020-10-22,Code 12
+594,Address 594,Yes,Group Home (VO),3,2022-01-30,2022-03-01,Code 8
+595,Address 595,No,High Rise,NA,2020-02-24,2020-04-05,Code 12
+596,Address 596,Yes,Group Home (VO),1,2020-08-09,2020-09-26,Code 18
+597,Address 597,Yes,High Rise,14,2022-10-20,2022-12-24,Code 9
+598,Address 598,No,High Rise,22,2021-11-20,2021-11-23,Code 11
+599,Address 599,No,High Rise,9,2020-12-08,2021-01-19,Code 13
+600,Address 600,No,Low Rise,8,2021-09-10,2021-09-23,Code 14
+601,Address 601,No,Low Rise,7,2021-05-03,2021-05-09,Code 10
+602,Address 602,Yes,Low Rise,13,2020-01-06,2020-04-06,NA
+603,Address 603,No,Low Rise,1,2022-09-15,2022-12-09,Code 20
+604,Address 604,No,High Rise,11,2022-01-14,2022-04-03,NA
+605,Address 605,No,Low Rise,15,2021-12-24,2022-01-18,Code 20
+606,Address 606,No,High Rise,24,2021-09-16,2021-11-07,Code 6
+607,Address 607,No,Rooming House,23,2021-04-11,2021-07-16,Code 20
+608,Address 608,No,Hospital,9,2020-06-17,2020-08-28,Code 20
+609,Address 609,Yes,High Rise,20,2021-08-01,2021-08-27,NA
+610,Address 610,No,Group Home (VO),17,2022-12-11,2023-01-08,Code 19
+611,Address 611,No,High Rise,11,2022-09-19,2022-12-19,Code 14
+612,Address 612,No,High Rise,16,2020-03-10,2020-06-14,NA
+613,Address 613,No,Hospital,9,2021-12-23,2022-03-22,Code 5
+614,Address 614,No,Group Home,22,2022-03-23,2022-04-21,Code 19
+615,Address 615,No,Hotel & Motel,3,2020-03-24,2020-05-29,Code 12
+616,Address 616,Yes,Rooming House,8,2021-03-27,2021-05-13,Code 13
+617,Address 617,No,High Rise,6,2020-11-30,2021-01-20,Code 10
+618,Address 618,No,Group Home,17,2020-03-05,2020-03-28,Code 14
+619,Address 619,Yes,High Rise,NA,2020-08-05,2020-09-07,Code 3
+620,Address 620,No,High Rise,24,2022-12-02,2023-02-14,Code 15
+621,Address 621,No,Group Home (VO),21,2021-07-12,2021-10-12,Code 8
+622,Address 622,No,Low Rise,9,2020-11-30,2021-02-01,Code 5
+623,Address 623,Yes,High Rise,22,2022-12-09,2023-03-06,Code 6
+624,Address 624,No,High Rise,7,2021-10-18,2021-11-27,Code 9
+625,Address 625,No,Rooming House,5,2022-05-28,2022-07-28,Code 20
+626,Address 626,No,Rooming House,23,2020-01-17,2020-02-05,Code 19
+627,Address 627,Yes,High Rise,7,2022-01-11,2022-03-13,Code 20
+628,Address 628,No,Residential Care,3,2021-01-23,2021-03-08,NA
+629,Address 629,No,Low Rise,24,2022-11-16,2023-02-10,Code 3
+630,Address 630,No,Nursing Home,19,2022-02-13,2022-04-06,Code 4
+631,Address 631,No,Detention,22,2020-04-18,2020-07-22,Code 8
+632,Address 632,No,Group Home,18,2020-07-26,2020-08-24,Code 13
+633,Address 633,No,Rooming House,9,2021-03-17,2021-03-24,Code 16
+634,Address 634,Yes,High Rise,10,2020-10-02,2020-11-01,Code 5
+635,Address 635,No,Low Rise,3,2021-12-03,2021-12-31,Code 16
+636,Address 636,No,Hospital,22,2020-05-22,2020-06-05,Code 11
+637,Address 637,Yes,Group Home (VO),4,2020-05-07,2020-05-07,Code 12
+638,Address 638,Yes,Hotel & Motel,18,2022-10-25,2022-11-22,Code 10
+639,Address 639,No,High Rise,13,2020-04-16,2020-04-18,Code 10
+640,Address 640,Yes,Group Home,25,2020-03-06,2020-05-28,Code 8
+641,Address 641,No,Low Rise,5,2022-11-23,2023-02-04,Code 10
+642,Address 642,No,Low Rise,2,2021-06-30,2021-09-20,Code 16
+643,Address 643,No,Group Home (VO),24,2021-06-09,2021-08-17,Code 14
+644,Address 644,No,Group Home,22,2020-02-27,2020-04-05,NA
+645,Address 645,No,Group Home (VO),24,2021-03-09,2021-06-09,Code 7
+646,Address 646,No,Group Home,17,2020-05-21,2020-07-05,Code 17
+647,Address 647,Yes,Group Home,10,2021-08-15,2021-11-10,Code 13
+648,Address 648,No,High Rise,16,2021-04-01,2021-06-16,Code 9
+649,Address 649,No,Low Rise,5,2021-08-23,2021-11-05,Code 15
+650,Address 650,No,Group Home,12,2020-08-26,2020-10-14,Code 19
+651,Address 651,No,Nursing Home,25,2022-11-10,2023-02-07,Code 15
+652,Address 652,No,Group Home (VO),16,2020-04-12,2020-05-24,NA
+653,Address 653,No,Low Rise,5,2021-12-07,2022-02-15,Code 7
+654,Address 654,No,Group Home,25,2020-02-06,2020-04-27,Code 10
+655,Address 655,No,Residential Care,22,2020-04-17,2020-07-14,Code 7
+656,Address 656,Yes,Low Rise,5,2020-03-20,2020-06-27,Code 9
+657,Address 657,Yes,Hotel & Motel,3,2021-11-10,2022-02-06,Code 3
+658,Address 658,No,Nursing Home,6,2020-12-26,2021-01-03,Code 6
+659,Address 659,No,High Rise,20,2021-01-14,2021-04-20,Code 14
+660,Address 660,Yes,High Rise,16,2020-09-22,2020-10-06,Code 16
+661,Address 661,No,Hospital,12,2020-03-19,2020-03-24,Code 17
+662,Address 662,Yes,Group Home,15,2021-08-17,2021-11-07,NA
+663,Address 663,No,High Rise,3,2022-07-26,2022-09-27,Code 11
+664,Address 664,No,Rooming House,25,2022-11-12,2022-11-28,Code 17
+665,Address 665,No,Hospital,3,2022-08-12,2022-10-08,Code 16
+666,Address 666,No,Group Home (VO),3,2022-06-27,2022-08-22,Code 12
+667,Address 667,Yes,Group Home (VO),23,2021-12-02,2022-01-06,Code 20
+668,Address 668,Yes,Group Home,23,2022-06-13,2022-07-12,Code 17
+669,Address 669,No,High Rise,21,2020-08-31,2020-11-16,Code 11
+670,Address 670,No,High Rise,24,2020-12-12,2021-02-17,NA
+671,Address 671,No,Nursing Home,17,2020-06-06,2020-07-11,NA
+672,Address 672,Yes,High Rise,12,2022-01-08,2022-01-08,Code 20
+673,Address 673,Yes,Low Rise,21,2021-07-04,2021-08-28,Code 9
+674,Address 674,No,Low Rise,18,2022-12-04,2022-12-07,Code 3
+675,Address 675,No,Detention,1,2022-02-11,2022-03-29,Code 11
+676,Address 676,Yes,Residential Care,10,2020-08-02,2020-09-06,Code 8
+677,Address 677,No,Low Rise,2,2021-02-15,2021-05-02,Code 12
+678,Address 678,No,Group Home,11,2021-02-27,2021-03-08,Code 1
+679,Address 679,No,Residential Care,23,2022-11-02,2022-11-16,Code 16
+680,Address 680,Yes,High Rise,7,2022-02-25,2022-04-27,Code 14
+681,Address 681,No,High Rise,18,2021-12-16,2021-12-20,Code 14
+682,Address 682,No,High Rise,18,2021-10-09,2021-10-10,Code 5
+683,Address 683,No,Residential Care,17,2021-05-29,2021-08-01,Code 10
+684,Address 684,Yes,Low Rise,9,2021-01-07,2021-01-15,Code 12
+685,Address 685,No,Group Home (VO),12,2022-03-12,2022-06-15,Code 9
+686,Address 686,Yes,Low Rise,1,2021-06-18,2021-08-01,Code 15
+687,Address 687,No,Hospital,2,2021-04-04,2021-07-03,Code 3
+688,Address 688,No,Low Rise,6,2022-10-04,2022-11-11,Code 8
+689,Address 689,Yes,High Rise,22,2020-10-11,2020-11-15,Code 3
+690,Address 690,Yes,Nursing Home,4,2021-01-11,2021-02-23,Code 10
+691,Address 691,No,Residential Care,20,2021-12-18,2022-03-14,Code 15
+692,Address 692,Yes,High Rise,2,2021-03-11,2021-06-17,NA
+693,Address 693,No,Hotel & Motel,22,2020-08-10,2020-08-12,Code 9
+694,Address 694,No,High Rise,21,2021-02-16,2021-03-14,Code 19
+695,Address 695,No,High Rise,NA,2021-12-21,2022-02-04,Code 17
+696,Address 696,No,Rooming House,12,2020-06-13,2020-06-29,Code 16
+697,Address 697,Yes,High Rise,18,2020-09-04,2020-11-23,Code 1
+698,Address 698,No,Rooming House,7,2021-12-18,2022-03-09,Code 17
+699,Address 699,No,Group Home,10,2020-01-31,2020-03-23,Code 2
+700,Address 700,No,Group Home,12,2022-02-16,2022-04-08,Code 1
+701,Address 701,No,Low Rise,19,2022-12-28,2023-01-03,Code 16
+702,Address 702,Yes,Low Rise,22,2020-10-15,2020-10-25,Code 6
+703,Address 703,No,Low Rise,2,2021-05-16,2021-07-08,Code 13
+704,Address 704,Yes,Residential Care,8,2021-05-19,2021-06-28,Code 1
+705,Address 705,No,Low Rise,8,2020-02-29,2020-04-03,Code 9
+706,Address 706,Yes,High Rise,18,2021-06-12,2021-07-19,Code 5
+707,Address 707,No,Hospital,16,2022-03-27,2022-06-13,Code 19
+708,Address 708,No,Group Home (VO),11,2021-02-22,2021-04-05,Code 8
+709,Address 709,Yes,Low Rise,NA,2021-07-05,2021-09-24,Code 18
+710,Address 710,No,Rooming House,23,2022-12-21,2022-12-29,Code 10
+711,Address 711,Yes,Group Home (VO),22,2021-07-09,2021-09-08,Code 7
+712,Address 712,No,Group Home,2,2021-09-21,2021-10-01,Code 9
+713,Address 713,No,Hospital,13,2020-12-20,2021-01-23,Code 8
+714,Address 714,Yes,Low Rise,NA,2021-12-23,2022-02-18,Code 4
+715,Address 715,Yes,Group Home,22,2020-01-07,2020-01-12,Code 20
+716,Address 716,No,Low Rise,10,2021-05-23,2021-08-10,Code 19
+717,Address 717,No,Group Home (VO),24,2022-04-25,2022-07-31,Code 11
+718,Address 718,No,Hotel & Motel,7,2021-09-15,2021-10-28,Code 12
+719,Address 719,No,High Rise,3,2022-05-30,2022-05-31,Code 7
+720,Address 720,Yes,High Rise,18,2022-11-26,2023-01-24,Code 15
+721,Address 721,No,High Rise,8,2022-10-19,2023-01-22,Code 16
+722,Address 722,No,Low Rise,21,2020-07-30,2020-09-07,Code 19
+723,Address 723,No,Nursing Home,21,2020-02-10,2020-02-13,Code 2
+724,Address 724,No,Hospital,5,2021-01-18,2021-03-02,NA
+725,Address 725,No,Group Home,9,2021-08-27,2021-11-23,Code 14
+726,Address 726,Yes,Residential Care,14,2021-07-10,2021-09-13,Code 7
+727,Address 727,No,Hotel & Motel,21,2021-02-03,2021-02-04,Code 13
+728,Address 728,No,Low Rise,13,2021-02-01,2021-05-07,Code 8
+729,Address 729,No,High Rise,2,2020-11-22,2021-02-05,Code 6
+730,Address 730,No,Low Rise,20,2021-10-02,2021-12-21,Code 13
+731,Address 731,No,Group Home (VO),2,2020-12-19,2021-01-13,Code 10
+732,Address 732,No,Group Home (VO),8,2020-06-20,2020-08-27,Code 7
+733,Address 733,No,Group Home,9,2022-08-03,2022-08-29,NA
+734,Address 734,No,High Rise,17,2022-09-07,2022-12-10,Code 13
+735,Address 735,Yes,Low Rise,3,2022-10-09,2022-10-20,Code 19
+736,Address 736,Yes,Group Home,3,2021-10-01,2021-10-18,Code 18
+737,Address 737,Yes,High Rise,4,2022-01-29,2022-03-12,Code 10
+738,Address 738,Yes,High Rise,5,2021-03-08,2021-04-10,Code 8
+739,Address 739,No,Low Rise,18,2021-04-13,2021-04-29,Code 7
+740,Address 740,No,Group Home,8,2022-12-01,2023-02-15,Code 1
+741,Address 741,No,High Rise,21,2022-11-24,2023-03-01,Code 10
+742,Address 742,Yes,Hospital,9,2021-07-27,2021-10-02,Code 12
+743,Address 743,No,Low Rise,9,2022-04-02,2022-07-06,Code 8
+744,Address 744,No,Rooming House,2,2022-09-04,2022-09-19,Code 15
+745,Address 745,Yes,High Rise,11,2021-01-14,2021-03-06,Code 18
+746,Address 746,Yes,High Rise,21,2022-07-11,2022-08-26,Code 4
+747,Address 747,Yes,High Rise,1,2021-12-22,2021-12-23,Code 10
+748,Address 748,No,High Rise,24,2021-12-08,2022-01-30,Code 19
+749,Address 749,No,High Rise,3,2021-03-10,2021-05-14,Code 2
+750,Address 750,Yes,High Rise,22,2021-01-09,2021-03-09,Code 1
+751,Address 751,No,High Rise,25,2021-06-16,2021-06-23,Code 5
+752,Address 752,No,High Rise,7,2021-11-20,2022-02-01,NA
+753,Address 753,No,Low Rise,5,2021-04-26,2021-06-07,Code 12
+754,Address 754,No,High Rise,11,2021-01-22,2021-02-12,Code 1
+755,Address 755,No,Rooming House,16,2020-12-27,2021-01-06,Code 14
+756,Address 756,No,Detention,17,2021-02-18,2021-03-10,Code 2
+757,Address 757,No,Residential Care,18,2022-01-22,2022-03-26,Code 11
+758,Address 758,No,Group Home (VO),18,2021-09-07,2021-09-20,Code 11
+759,Address 759,No,Detention,4,2022-07-21,2022-10-10,Code 10
+760,Address 760,No,High Rise,20,2021-10-10,2021-12-08,Code 10
+761,Address 761,Yes,High Rise,NA,2020-09-30,2020-12-08,Code 14
+762,Address 762,No,High Rise,5,2021-04-29,2021-05-29,Code 19
+763,Address 763,No,Rooming House,23,2020-05-05,2020-06-24,Code 4
+764,Address 764,No,Residential Care,2,2022-02-28,2022-05-07,Code 3
+765,Address 765,Yes,High Rise,10,2021-01-15,2021-03-19,Code 3
+766,Address 766,Yes,High Rise,NA,2021-09-04,2021-09-16,Code 6
+767,Address 767,No,Group Home (VO),13,2022-10-27,2022-12-24,Code 11
+768,Address 768,No,Group Home,22,2021-01-16,2021-03-04,Code 16
+769,Address 769,No,High Rise,6,2020-08-27,2020-09-16,Code 16
+770,Address 770,No,Nursing Home,9,2022-11-03,2023-01-08,Code 9
+771,Address 771,No,Low Rise,13,2020-12-08,2020-12-30,Code 20
+772,Address 772,No,High Rise,10,2022-08-04,2022-08-17,Code 3
+773,Address 773,Yes,Group Home (VO),11,2020-11-10,2021-01-25,Code 19
+774,Address 774,No,Hospital,25,2022-05-07,2022-07-21,NA
+775,Address 775,No,Group Home (VO),6,2021-06-05,2021-06-17,Code 11
+776,Address 776,No,Group Home,12,2021-08-18,2021-09-03,Code 18
+777,Address 777,No,High Rise,22,2021-10-16,2021-11-10,Code 15
+778,Address 778,Yes,High Rise,6,2020-08-26,2020-08-26,NA
+779,Address 779,No,Hospital,25,2021-11-30,2022-01-30,Code 11
+780,Address 780,No,High Rise,4,2021-02-20,2021-02-21,Code 3
+781,Address 781,Yes,Detention,2,2020-01-26,2020-04-30,Code 6
+782,Address 782,No,Low Rise,24,2020-12-24,2021-01-14,Code 1
+783,Address 783,No,Group Home (VO),4,2022-03-06,2022-06-12,NA
+784,Address 784,No,High Rise,5,2022-09-17,2022-09-24,Code 19
+785,Address 785,No,Low Rise,23,2021-12-31,2022-02-05,Code 5
+786,Address 786,Yes,Group Home (VO),5,2021-04-02,2021-06-29,Code 5
+787,Address 787,No,Group Home (VO),1,2022-11-14,2023-01-29,Code 9
+788,Address 788,No,Group Home,15,2020-12-03,2021-03-12,Code 10
+789,Address 789,Yes,High Rise,1,2022-09-08,2022-09-19,NA
+790,Address 790,No,High Rise,1,2021-08-28,2021-09-08,Code 9
+791,Address 791,Yes,Low Rise,19,2021-01-20,2021-01-26,Code 7
+792,Address 792,No,Detention,3,2020-03-04,2020-03-28,Code 10
+793,Address 793,No,Group Home,11,2021-12-25,2022-02-03,NA
+794,Address 794,No,High Rise,14,2021-07-04,2021-09-21,Code 2
+795,Address 795,Yes,Detention,24,2020-09-18,2020-12-20,Code 11
+796,Address 796,No,Hospital,20,2022-04-20,2022-05-10,Code 15
+797,Address 797,Yes,High Rise,12,2022-02-04,2022-02-22,Code 6
+798,Address 798,No,High Rise,25,2022-03-29,2022-06-24,NA
+799,Address 799,Yes,High Rise,21,2022-12-24,2023-03-31,Code 6
+800,Address 800,No,Low Rise,9,2021-04-03,2021-04-19,Code 11
+801,Address 801,No,Group Home (VO),20,2021-05-29,2021-06-02,Code 4
+802,Address 802,No,High Rise,15,2022-12-09,2023-01-26,Code 17
+803,Address 803,Yes,Rooming House,19,2020-10-29,2020-11-17,Code 6
+804,Address 804,Yes,Residential Care,24,2021-08-07,2021-11-11,Code 5
+805,Address 805,Yes,Hospital,11,2022-04-06,2022-04-21,Code 19
+806,Address 806,No,Low Rise,20,2020-06-16,2020-06-18,Code 2
+807,Address 807,Yes,High Rise,21,2022-04-03,2022-05-17,Code 15
+808,Address 808,Yes,Hospital,18,2021-11-21,2021-12-24,Code 2
+809,Address 809,No,Hospital,5,2022-10-01,2022-10-27,Code 20
+810,Address 810,No,High Rise,18,2022-09-18,2022-12-05,Code 13
+811,Address 811,No,Nursing Home,25,2021-04-19,2021-06-07,Code 17
+812,Address 812,Yes,High Rise,22,2020-06-27,2020-07-29,NA
+813,Address 813,No,High Rise,15,2021-06-30,2021-09-22,Code 2
+814,Address 814,No,Low Rise,8,2022-07-31,2022-10-29,Code 15
+815,Address 815,Yes,High Rise,5,2021-01-21,2021-02-22,Code 5
+816,Address 816,No,Low Rise,2,2020-07-02,2020-09-18,Code 11
+817,Address 817,Yes,Low Rise,21,2022-07-08,2022-10-11,Code 14
+818,Address 818,No,Detention,20,2020-05-25,2020-07-28,Code 15
+819,Address 819,Yes,Low Rise,2,2020-05-09,2020-07-06,Code 6
+820,Address 820,No,Low Rise,14,2020-11-21,2021-02-06,Code 6
+821,Address 821,Yes,High Rise,4,2022-03-24,2022-06-14,Code 1
+822,Address 822,Yes,Low Rise,4,2020-05-31,2020-09-07,NA
+823,Address 823,No,Low Rise,7,2022-11-14,2023-02-13,Code 14
+824,Address 824,Yes,Low Rise,12,2022-01-24,2022-04-08,Code 12
+825,Address 825,No,Low Rise,4,2021-10-08,2021-11-24,Code 19
+826,Address 826,No,Residential Care,8,2020-04-23,2020-05-13,Code 8
+827,Address 827,No,High Rise,12,2020-05-24,2020-06-14,Code 17
+828,Address 828,Yes,High Rise,10,2022-02-22,2022-04-08,Code 6
+829,Address 829,No,Group Home (VO),24,2021-02-22,2021-03-03,Code 7
+830,Address 830,Yes,Residential Care,17,2022-11-09,2023-01-14,Code 9
+831,Address 831,No,Rooming House,19,2021-05-13,2021-05-27,Code 19
+832,Address 832,No,Low Rise,9,2022-01-24,2022-03-28,Code 5
+833,Address 833,Yes,High Rise,2,2020-11-18,2021-02-06,Code 10
+834,Address 834,Yes,High Rise,25,2021-01-16,2021-02-16,Code 3
+835,Address 835,No,High Rise,22,2020-04-04,2020-06-12,Code 12
+836,Address 836,No,Low Rise,16,2020-03-04,2020-03-10,Code 9
+837,Address 837,Yes,Hospital,9,2021-10-28,2021-11-21,Code 14
+838,Address 838,No,Low Rise,11,2021-04-29,2021-05-28,Code 3
+839,Address 839,No,High Rise,18,2021-03-02,2021-06-08,NA
+840,Address 840,Yes,Residential Care,13,2021-03-01,2021-05-21,NA
+841,Address 841,No,Hotel & Motel,16,2020-08-22,2020-11-21,Code 6
+842,Address 842,No,High Rise,10,2021-09-04,2021-10-17,Code 18
+843,Address 843,No,High Rise,1,2022-04-20,2022-05-13,Code 2
+844,Address 844,No,Low Rise,15,2022-03-28,2022-05-21,Code 16
+845,Address 845,No,Hotel & Motel,13,2022-04-16,2022-06-29,Code 16
+846,Address 846,Yes,Hotel & Motel,6,2022-03-15,2022-06-21,Code 15
+847,Address 847,Yes,Group Home,6,2021-09-09,2021-11-22,Code 17
+848,Address 848,No,Group Home,14,2021-11-25,2022-02-23,Code 7
+849,Address 849,No,Hotel & Motel,15,2020-12-09,2021-02-18,Code 18
+850,Address 850,Yes,High Rise,22,2020-08-01,2020-08-02,Code 17
+851,Address 851,Yes,Rooming House,9,2022-08-10,2022-09-25,Code 4
+852,Address 852,No,Group Home,NA,2021-05-14,2021-06-26,Code 2
+853,Address 853,Yes,High Rise,23,2022-08-30,2022-09-27,Code 5
+854,Address 854,No,Group Home (VO),17,2022-12-07,2023-01-13,Code 3
+855,Address 855,No,High Rise,3,2020-04-12,2020-07-10,Code 4
+856,Address 856,Yes,High Rise,4,2021-01-28,2021-03-04,Code 4
+857,Address 857,Yes,Group Home (VO),7,2021-03-30,2021-04-28,Code 1
+858,Address 858,No,Detention,14,2020-04-11,2020-05-18,Code 10
+859,Address 859,No,Group Home (VO),23,2022-08-22,2022-11-20,Code 13
+860,Address 860,No,Nursing Home,2,2022-01-22,2022-04-10,Code 8
+861,Address 861,No,Residential Care,NA,2020-10-19,2020-12-26,Code 11
+862,Address 862,No,Hospital,10,2022-10-08,2022-10-15,Code 17
+863,Address 863,Yes,High Rise,19,2022-05-02,2022-05-07,Code 6
+864,Address 864,No,High Rise,5,2021-03-11,2021-06-17,Code 1
+865,Address 865,Yes,Low Rise,16,2022-12-22,2023-01-04,Code 5
+866,Address 866,No,Group Home (VO),4,2020-10-31,2020-11-22,Code 1
+867,Address 867,No,High Rise,16,2021-12-15,2022-01-21,Code 6
+868,Address 868,No,Low Rise,4,2021-10-09,2021-12-25,Code 2
+869,Address 869,Yes,High Rise,22,2021-06-09,2021-09-16,NA
+870,Address 870,No,Low Rise,5,2020-11-01,2020-11-07,Code 17
+871,Address 871,Yes,Group Home,12,2021-07-02,2021-07-11,Code 9
+872,Address 872,No,Group Home (VO),24,2020-12-16,2021-01-24,NA
+873,Address 873,Yes,Hotel & Motel,13,2021-10-27,2022-01-13,Code 3
+874,Address 874,Yes,High Rise,24,2021-02-27,2021-04-24,Code 7
+875,Address 875,Yes,Rooming House,24,2021-02-19,2021-03-26,Code 18
+876,Address 876,Yes,Nursing Home,12,2021-08-06,2021-10-01,Code 7
+877,Address 877,No,Low Rise,15,2022-04-10,2022-04-10,Code 19
+878,Address 878,No,High Rise,21,2020-07-14,2020-07-23,Code 17
+879,Address 879,No,Group Home (VO),4,2020-09-07,2020-12-12,Code 7
+880,Address 880,No,Group Home (VO),22,2022-05-12,2022-07-31,NA
+881,Address 881,No,Rooming House,1,2021-12-05,2021-12-05,Code 3
+882,Address 882,Yes,Nursing Home,8,2020-10-02,2020-11-04,Code 16
+883,Address 883,Yes,High Rise,11,2022-02-25,2022-03-17,Code 1
+884,Address 884,No,High Rise,24,2020-06-13,2020-06-14,Code 17
+885,Address 885,Yes,Detention,15,2021-07-23,2021-08-23,Code 12
+886,Address 886,No,High Rise,19,2020-05-14,2020-05-29,Code 7
+887,Address 887,No,Residential Care,NA,2022-08-07,2022-11-08,Code 11
+888,Address 888,Yes,High Rise,21,2020-09-03,2020-09-13,Code 12
+889,Address 889,Yes,Low Rise,15,2021-02-25,2021-04-11,Code 17
+890,Address 890,No,Residential Care,25,2022-08-18,2022-11-12,Code 10
+891,Address 891,No,Low Rise,12,2022-10-19,2023-01-23,Code 7
+892,Address 892,No,High Rise,1,2021-04-03,2021-07-02,Code 8
+893,Address 893,No,Group Home (VO),NA,2021-07-30,2021-09-15,Code 7
+894,Address 894,No,High Rise,13,2022-06-06,2022-06-10,Code 14
+895,Address 895,No,Rooming House,18,2022-12-03,2023-03-07,Code 3
+896,Address 896,Yes,Rooming House,18,2021-01-18,2021-02-03,Code 13
+897,Address 897,No,Group Home,3,2020-04-30,2020-05-30,Code 12
+898,Address 898,No,Residential Care,1,2021-08-23,2021-09-02,Code 8
+899,Address 899,No,Hotel & Motel,16,2020-05-18,2020-07-02,Code 10
+900,Address 900,No,Group Home (VO),22,2022-02-14,2022-05-11,Code 8
+901,Address 901,No,High Rise,16,2021-06-29,2021-08-29,Code 19
+902,Address 902,No,Group Home,21,2022-06-08,2022-07-22,Code 12
+903,Address 903,Yes,Nursing Home,NA,2022-06-23,2022-08-12,Code 7
+904,Address 904,No,Group Home,NA,2022-10-07,2022-12-11,Code 15
+905,Address 905,Yes,Group Home (VO),16,2020-05-19,2020-06-21,Code 2
+906,Address 906,No,Group Home (VO),21,2022-05-26,2022-08-08,Code 10
+907,Address 907,No,Group Home (VO),20,2020-02-26,2020-06-04,Code 7
+908,Address 908,No,High Rise,22,2022-12-31,2023-03-10,Code 15
+909,Address 909,Yes,High Rise,16,2021-02-12,2021-04-08,Code 8
+910,Address 910,No,High Rise,13,2021-01-25,2021-03-05,Code 5
+911,Address 911,No,Detention,2,2020-06-08,2020-07-13,Code 8
+912,Address 912,No,Nursing Home,11,2021-03-24,2021-05-23,Code 1
+913,Address 913,No,Group Home (VO),14,2020-08-31,2020-08-31,Code 10
+914,Address 914,No,High Rise,10,2020-10-28,2021-01-19,NA
+915,Address 915,No,Hotel & Motel,23,2022-07-15,2022-08-30,Code 16
+916,Address 916,No,High Rise,11,2022-11-23,2023-02-04,NA
+917,Address 917,Yes,Low Rise,7,2021-02-13,2021-05-11,Code 3
+918,Address 918,No,Rooming House,18,2022-10-22,2023-01-05,Code 16
+919,Address 919,Yes,High Rise,3,2021-03-04,2021-03-05,Code 9
+920,Address 920,No,Group Home (VO),22,2020-07-23,2020-09-13,Code 19
+921,Address 921,No,High Rise,21,2021-02-23,2021-04-30,Code 8
+922,Address 922,No,Group Home,18,2021-12-29,2022-03-08,Code 17
+923,Address 923,No,Low Rise,14,2020-03-06,2020-04-18,Code 11
+924,Address 924,No,Nursing Home,21,2022-11-27,2023-01-15,Code 13
+925,Address 925,Yes,High Rise,15,2022-06-11,2022-08-16,Code 6
+926,Address 926,No,Hotel & Motel,12,2022-12-12,2023-03-09,Code 8
+927,Address 927,Yes,Detention,13,2022-08-24,2022-10-15,Code 3
+928,Address 928,No,Low Rise,12,2020-10-26,2020-12-28,Code 13
+929,Address 929,Yes,Residential Care,5,2022-11-28,2023-02-06,Code 18
+930,Address 930,No,Hospital,NA,2022-09-15,2022-10-21,Code 2
+931,Address 931,No,High Rise,20,2020-10-08,2020-12-25,Code 10
+932,Address 932,Yes,Group Home (VO),21,2020-06-27,2020-08-02,NA
+933,Address 933,No,Hotel & Motel,17,2022-11-17,2023-01-08,Code 2
+934,Address 934,No,Nursing Home,5,2022-02-03,2022-04-08,Code 4
+935,Address 935,No,Low Rise,19,2021-12-25,2022-01-12,Code 10
+936,Address 936,Yes,Hotel & Motel,4,2020-07-04,2020-07-10,Code 13
+937,Address 937,Yes,High Rise,15,2020-08-28,2020-11-11,Code 2
+938,Address 938,Yes,Residential Care,14,2020-08-19,2020-11-16,Code 3
+939,Address 939,Yes,Low Rise,12,2020-04-06,2020-04-09,Code 1
+940,Address 940,No,Group Home,14,2021-05-06,2021-06-19,Code 20
+941,Address 941,Yes,Rooming House,23,2021-11-20,2022-01-25,Code 1
+942,Address 942,No,High Rise,15,2022-11-09,2022-12-25,Code 13
+943,Address 943,No,Group Home (VO),17,2021-02-06,2021-02-18,Code 4
+944,Address 944,No,Hospital,25,2020-03-18,2020-04-18,Code 6
+945,Address 945,Yes,High Rise,21,2020-08-24,2020-11-15,Code 19
+946,Address 946,No,Group Home (VO),1,2022-12-02,2023-02-04,Code 8
+947,Address 947,Yes,Group Home,25,2022-08-21,2022-09-28,Code 6
+948,Address 948,No,Low Rise,20,2022-11-04,2022-11-22,Code 9
+949,Address 949,No,High Rise,7,2022-08-31,2022-10-22,Code 18
+950,Address 950,Yes,Residential Care,6,2021-03-20,2021-03-20,Code 2
+951,Address 951,No,Low Rise,9,2020-07-16,2020-09-09,Code 18
+952,Address 952,Yes,High Rise,13,2020-04-28,2020-07-27,Code 6
+953,Address 953,No,Group Home (VO),5,2022-06-06,2022-09-06,Code 1
+954,Address 954,No,Nursing Home,13,2021-01-22,2021-02-09,Code 15
+955,Address 955,No,High Rise,13,2021-02-12,2021-04-08,NA
+956,Address 956,Yes,Low Rise,4,2022-09-21,2022-10-19,Code 9
+957,Address 957,Yes,High Rise,17,2022-12-30,2023-03-23,Code 15
+958,Address 958,No,Residential Care,6,2021-09-19,2021-12-26,Code 17
+959,Address 959,No,Low Rise,4,2020-10-05,2021-01-02,Code 3
+960,Address 960,Yes,Low Rise,2,2020-07-04,2020-07-05,Code 18
+961,Address 961,No,Group Home (VO),19,2022-06-16,2022-08-17,Code 1
+962,Address 962,No,High Rise,19,2021-10-06,2021-10-25,Code 14
+963,Address 963,Yes,Hotel & Motel,21,2020-10-27,2020-12-10,Code 11
+964,Address 964,Yes,Nursing Home,2,2022-08-28,2022-11-03,Code 12
+965,Address 965,Yes,Group Home (VO),11,2021-09-12,2021-12-21,Code 14
+966,Address 966,No,High Rise,22,2022-07-10,2022-07-18,Code 1
+967,Address 967,No,Group Home (VO),2,2021-12-12,2022-03-22,Code 10
+968,Address 968,Yes,Low Rise,23,2021-04-10,2021-05-29,Code 13
+969,Address 969,Yes,Hospital,13,2020-02-16,2020-03-11,Code 17
+970,Address 970,No,High Rise,4,2021-04-23,2021-07-22,Code 18
+971,Address 971,Yes,Group Home,22,2020-10-13,2020-12-24,Code 20
+972,Address 972,Yes,Low Rise,2,2022-01-09,2022-04-01,Code 7
+973,Address 973,No,High Rise,4,2020-10-03,2021-01-02,NA
+974,Address 974,No,High Rise,15,2021-04-03,2021-04-09,Code 19
+975,Address 975,No,Group Home (VO),12,2021-09-24,2021-11-11,Code 10
+976,Address 976,No,High Rise,18,2020-12-01,2021-03-07,Code 2
+977,Address 977,No,Group Home (VO),15,2021-07-09,2021-09-18,Code 8
+978,Address 978,No,Nursing Home,16,2022-12-11,2023-01-07,Code 16
+979,Address 979,No,High Rise,4,2021-02-21,2021-04-25,Code 15
+980,Address 980,No,High Rise,5,2022-11-27,2022-12-12,Code 12
+981,Address 981,Yes,High Rise,4,2021-06-14,2021-08-13,Code 5
+982,Address 982,Yes,Hospital,14,2022-05-17,2022-08-23,NA
+983,Address 983,Yes,Group Home (VO),2,2020-07-23,2020-09-16,NA
+984,Address 984,No,Group Home (VO),4,2021-07-05,2021-07-25,Code 19
+985,Address 985,No,High Rise,21,2020-04-12,2020-07-21,Code 11
+986,Address 986,No,Detention,13,2020-01-15,2020-02-21,Code 12
+987,Address 987,No,Low Rise,7,2021-09-24,2021-09-28,Code 1
+988,Address 988,Yes,Low Rise,NA,2022-11-05,2022-12-12,Code 10
+989,Address 989,No,Residential Care,10,2021-06-14,2021-06-19,Code 20
+990,Address 990,Yes,Group Home,13,2020-03-06,2020-05-21,Code 19
+991,Address 991,No,Detention,18,2022-09-12,2022-10-08,Code 13
+992,Address 992,No,Low Rise,7,2021-12-09,2022-02-06,Code 8
+993,Address 993,No,Group Home (VO),16,2021-05-03,2021-05-26,Code 14
+994,Address 994,Yes,Residential Care,14,2020-05-10,2020-06-11,Code 3
+995,Address 995,No,Group Home,25,2022-06-17,2022-06-17,Code 11
+996,Address 996,No,Nursing Home,13,2020-07-03,2020-08-11,Code 19
+997,Address 997,No,Hospital,23,2021-04-27,2021-06-22,Code 19
+998,Address 998,Yes,Group Home (VO),16,2021-04-03,2021-04-22,NA
+999,Address 999,Yes,High Rise,7,2020-12-27,2021-01-06,Code 2
+1000,Address 1000,No,High Rise,13,2022-04-24,2022-05-16,Code 7
